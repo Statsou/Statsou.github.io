@@ -1,0 +1,13 @@
+.button-slider {
+  border: none;
+
+  svg {
+    stroke: $color-cerulean-blue;
+  }
+
+  &--next {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.link-primary {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-cerulean-blue;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 4px 4px 4px 26px;
+
+  border-radius: 30px;
+  border: 1px $color-cerulean-blue solid;
+  background-color: $color-transparent;
+  gap: 30px;
+}
+
+.link-primary__link-icon {
+  stroke: $color-default-white;
+
+  width: 46px;
+  height: 46px;
+  padding: 0 17px;
+
+  border-radius: 44px;
+  background-color: $color-cerulean-blue;
+}
+
+.link-primary--small {
+  padding: 0;
+  border: none;
+
+  .link-primary__link-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0 10px;
+  }
+}

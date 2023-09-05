@@ -1,0 +1,68 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+  padding: 120px 100px 60px;
+  column-gap: 30px;
+}
+
+.about__content-primary {
+  margin: 5px 0;
+
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+    letter-spacing: -2px;
+
+    margin: 0 0 27px;
+  }
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    color: $color-charcoal;
+    letter-spacing: -1px;
+
+    padding: 0 60px 0 0;
+    margin: 0;
+  }
+}
+
+.about__content-secundary {
+  margin: 0 0 32px;
+
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: $color-cerulean-blue;
+
+    margin: 0 0 32px;
+  }
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-charcoal;
+
+    padding: 0 50px 0 0;
+    margin: 0;
+  }
+}
+
+.about__button {
+  grid-column: 2;
+  margin: 0 0 58px;
+}

@@ -1,0 +1,107 @@
+.way {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 125px 206px 107px 100px;
+
+  gap: 138px;
+  background-color: $color-cerulean-blue;
+}
+
+.way__container-primary {
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: $color-default-white;
+    letter-spacing: -2px;
+
+    margin: 0 0 29px;
+  }
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-alabaster;
+    letter-spacing: -1px;
+
+    margin: 0 0 32px;
+    padding: 0;
+  }
+}
+
+.way__container-secundary {
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: $color-default-white;
+    letter-spacing: -1px;
+
+    width: 375px;
+    margin: 4px 0 54px;
+  }
+}
+
+.way__list {
+  padding: 0 0 0 19px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.way__item {
+  position: relative;
+
+  padding: 23px 75px 21px 25px;
+  border: 1px $color-default-white solid;
+  border-radius: 16px;
+
+  counter-increment: section 0;
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-alabaster;
+    letter-spacing: -1px;
+
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 23px;
+  }
+
+  &::after {
+    position: absolute;
+    top: -14px;
+    left: -20px;
+
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    color: $color-default-white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+
+    background-color: $color-cerulean-blue;
+    border-radius: 30px;
+
+    counter-increment: section;
+    content: counters(section, ".");
+  }
+}

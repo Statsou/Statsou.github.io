@@ -1,0 +1,133 @@
+.slider-hero {
+  position: relative;
+  overflow: hidden;
+
+  // .slider-hero__bullet {
+  //   bottom: 350px;
+  //   left: 100px;
+
+  //   width: max-content;
+  // }
+}
+
+.slider-hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-hero__item {
+  display: flex;
+  align-items: flex-end;
+  height: 800px; // Временно
+  padding: 60px 100px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &--1 {
+    background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-1@2x.png");
+    }
+  }
+
+  &--2 {
+    background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-2.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-2@2x.png");
+    }
+  }
+
+  &--3 {
+    background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-3.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: $color-overlay-slider, url("../img/hero/background-slider-desktop-3@2x.png");
+    }
+  }
+}
+
+.slider-hero__content-slide {
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: $color-cerulean-blue;
+    letter-spacing: -2px;
+
+    width: 968px;
+    padding: 41px 50px 29px;
+    margin: 0;
+
+    background-color: $color-default-white;
+    border-radius: 0 30px 30px 0;
+  }
+}
+
+.slider-hero__content-slide--custom {
+  h2 {
+    padding: 41px 50px 23px;
+    box-shadow: 0 5px 0 0 $color-default-white;
+  }
+}
+
+.slider-hero__under-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 772px;
+  padding: 0 50px 33px;
+
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-charcoal;
+    letter-spacing: -0.5px; //Уточнить этот момент у наставников
+
+    width: 446px;
+    margin: 0;
+
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -25px;
+
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../img/svg/angle.svg");
+    content: "";
+  }
+}
+
+.slider-hero__under-wrapper--custom {
+  align-items: center;
+  padding: 0px 50px 27px;
+
+  &::after {
+    top: 5px;
+  }
+}
+
+.slider-hero__link-wrapper {
+  position: relative;
+  bottom: 1px;
+
+  background-color: $color-default-white;
+}

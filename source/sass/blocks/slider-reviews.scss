@@ -1,0 +1,107 @@
+.slider-reviews__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.slider-reviews__item {
+  padding: 50px 50px 42px;
+  border: 1px $color-cerulean-blue solid;
+  border-radius: 16px;
+
+  // Временно
+  width: 604px;
+}
+
+.slider-reviews__content-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 25px;
+
+  h3 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-cerulean-blue;
+    letter-spacing: -1px;
+
+    width: min-content;
+    margin: 0;
+  }
+}
+
+.slider-reviews__person-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.slider-reviews__under-list {
+  display: flex;
+  margin: 0;
+}
+
+.slider-reviews__under-item {
+  &:not(:last-child) {
+    margin-right: 29px;
+  }
+}
+
+.slider-reviews__under-title {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-cerulean-blue;
+  letter-spacing: -0.5px; // Спросить
+
+  text-transform: uppercase;
+
+  margin: 0 0 7px;
+}
+
+.slider-reviews__under-description {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-charcoal;
+  letter-spacing: -0.5px; // Спросить
+
+  margin: 0;
+}
+
+
+.slider-reviews__description {
+  h4 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    color: $color-cerulean-blue;
+    letter-spacing: -1px;
+
+    margin: 0 0 14px;
+  }
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-charcoal;
+    letter-spacing: -1px;
+
+    margin: 0;
+  }
+}

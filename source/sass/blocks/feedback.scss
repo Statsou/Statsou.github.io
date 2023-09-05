@@ -1,0 +1,107 @@
+.feedback {
+  padding: 120px 100px 10px;
+}
+
+.feedback__content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/feedback/feedback-background.png");
+  border-radius: 16px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/feedback/feedback-background@2x.png");
+    }
+}
+
+.feedback__form-wrapper {
+  width: 498px;
+  padding: 70px 74px 51px;
+
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+
+  h2 {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: $color-default-white;
+
+    margin: 0 0 38px;
+  }
+
+  p {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-default-white;
+
+    margin: 0 0 30px;
+  }
+}
+
+.feedback__form {
+  fieldset {
+    padding: 0;
+    margin: 0 0 40px;
+    min-inline-size: auto;
+
+    border: none;
+  }
+
+  input[type=text],
+  input[type=tel],
+  textarea {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-default-white;
+
+    width: 100%;
+    padding: 11px 25px;
+
+    background-color: $color-transparent;
+    border: 1px $color-white-opacity solid;
+    border-radius: 8px;
+  }
+}
+
+.feedback__input,
+.feedback__textarea {
+  margin: 0 0 20px;
+}
+
+.feedback__description-input,
+.feedback__description-select {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-alabaster;
+
+  display: block;
+  margin: 0 0 12px;
+
+  opacity: 0.8;
+}
+
+.custom-toggle__label {
+  font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $color-default-white;
+
+    opacity: 0.9;
+}
+
+.feedback__submit {
+  width: 100%;
+}

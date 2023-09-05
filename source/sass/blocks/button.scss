@@ -1,0 +1,46 @@
+.button {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 4px 4px 4px 30px;
+
+  border-radius: 30px;
+  border: 1px $color-cerulean-blue solid;
+  background-color: $color-transparent;
+  gap: 30px;
+
+  .button__incription {
+    font-family: "Manrope", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-cerulean-blue;
+    text-transform: uppercase;
+  }
+
+  svg {
+    stroke: $color-default-white;
+
+    width: 46px;
+    height: 46px;
+    padding: 0 17px;
+
+    border-radius: 44px;
+    background-color: $color-cerulean-blue;
+  }
+}
+
+.button--secundary {
+  border: 1px $color-default-white solid;
+
+  .button__incription {
+    color: $color-default-white;
+    width: 240px;
+  }
+
+  svg {
+    stroke: $color-cerulean-blue;
+    background-color: $color-default-white;
+  }
+}
