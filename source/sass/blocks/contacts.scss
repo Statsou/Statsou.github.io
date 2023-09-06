@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 120px 100px;
+  padding: 108px 100px 120px;
 
-  gap: 80px;
+  gap: 74px;
   flex-wrap: wrap;
   background-color: $color-cerulean-blue;
 
@@ -15,6 +15,7 @@
     font-size: 50px;
     line-height: 50px;
     color: $color-default-white;
+    letter-spacing: -2px;
 
     margin: 0;
   }
@@ -27,7 +28,7 @@
 
 .contacts__item {
   &:not(:last-child) {
-    margin-right: 51px;
+    margin-right: 40px;
   }
 }
 
@@ -40,7 +41,7 @@
   color: $color-alabaster;
   text-transform: uppercase;
 
-  margin: 0 0 24px;
+  margin: 11px 0 17px;
   opacity: 0.8;
 }
 
@@ -84,7 +85,7 @@
 
   &::after {
     position: absolute;
-    top: -40px;
+    top: -42px;
     left: 0;
 
     width: 100%;

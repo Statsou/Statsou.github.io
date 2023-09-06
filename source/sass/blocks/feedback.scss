@@ -15,7 +15,7 @@
 
 .feedback__form-wrapper {
   width: 498px;
-  padding: 70px 74px 51px;
+  padding: 83px 74px 50px;
 
   background-color: $color-cerulean-blue;
   border-radius: 16px;
@@ -27,8 +27,9 @@
     font-size: 32px;
     line-height: 36px;
     color: $color-default-white;
+    letter-spacing: -1px;
 
-    margin: 0 0 38px;
+    margin: 0 0 25px;
   }
 
   p {
@@ -38,15 +39,16 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-default-white;
+    letter-spacing: -1px;
 
-    margin: 0 0 30px;
+    margin: 0 0 18px;
   }
 }
 
 .feedback__form {
   fieldset {
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0 0 37px;
     min-inline-size: auto;
 
     border: none;
@@ -69,11 +71,18 @@
     border: 1px $color-white-opacity solid;
     border-radius: 8px;
   }
+
+  textarea {
+    height: 96px;
+  }
 }
 
-.feedback__input,
+.feedback__input {
+  margin: 0 0 16px;
+}
+
 .feedback__textarea {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
 }
 
 .feedback__description-input,
@@ -86,7 +95,7 @@
   color: $color-alabaster;
 
   display: block;
-  margin: 0 0 12px;
+  margin: 0 0 9px;
 
   opacity: 0.8;
 }

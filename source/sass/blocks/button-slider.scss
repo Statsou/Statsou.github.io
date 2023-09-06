@@ -1,5 +1,7 @@
 .button-slider {
   border: none;
+  z-index: 10;
+  user-select: none;
 
   svg {
     stroke: $color-cerulean-blue;

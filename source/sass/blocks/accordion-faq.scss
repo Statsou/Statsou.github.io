@@ -10,7 +10,16 @@
   border-radius: 16px;
 
   &:not(:last-child) {
-    margin: 0 0 40px;
+    margin: 0 0 10px;
+  }
+}
+
+.accordion-faq__element.is-active {
+  background-color: $color-cerulean-blue;
+  padding: 40px 40px 20px;
+
+  h3 {
+    color: $color-default-white;
   }
 }
 
@@ -26,7 +35,9 @@
     font-size: 28px;
     line-height: 34px;
     color: $color-cerulean-blue;
+    letter-spacing: -1px;
 
+    width: 63%;
     margin: 0;
   }
 }
@@ -70,6 +81,8 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-alabaster;
-    background-color: $color-cerulean-blue;
+
+    margin: 0;
+    padding: 12px 200px 12px 0;
   }
 }

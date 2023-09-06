@@ -1,5 +1,5 @@
 .reviews {
-  padding: 60px 100px 120px;
+  padding: 66px 100px 121px;
 
   h2 {
     font-family: "Manrope", "Arial", sans-serif;
@@ -12,4 +12,10 @@
 
     margin: 0 0 44px;
   }
+}
+
+.reviews__navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }

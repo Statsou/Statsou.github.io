@@ -1,7 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {swiperHero} from './utils/swiper-hero';
 import {swiperPrograms} from './utils/swiper-programs';
+import {swiperNews} from './utils/swiper-news';
+import {swiperReviews} from './utils/swiper-reviews';
 import {initModals} from './modules/modals/init-modals';
+import {initAccordions} from './modules/accordion/init-accordion';
 import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
@@ -14,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   swiperHero();
   swiperPrograms();
+  swiperNews();
+  swiperReviews();
 
   // Modules
   // ---------------------------------
@@ -22,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initAccordions();
     const form = new Form();
     window.form = form;
     form.init();

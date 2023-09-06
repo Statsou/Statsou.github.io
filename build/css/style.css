@@ -1153,6 +1153,22 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+}
+
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 300;
@@ -1892,8 +1908,7 @@ button,
 .custom-select {
   position: relative;
   width: 100%;
-  padding: 14px 0 28px;
-  margin: 0;
+  margin: 0 0 15px;
   /* &.is-valid {
     .custom-select__button {
       border: 2px solid $color-eucalyptus;
@@ -1972,8 +1987,8 @@ button,
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 48px;
-  padding: 5px 10px;
+  height: 51px;
+  padding: 5px 20px 5px 10px;
   background-color: rgba(255, 255, 255, 0);
   border: 1px rgba(255, 255, 255, 0.3) solid;
   border-radius: 5px;
@@ -2778,6 +2793,11 @@ button,
 
 .button-slider {
   border: none;
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .button-slider svg {
   stroke: #316dc2;
@@ -2886,6 +2906,7 @@ button,
 }
 
 .news {
+  position: relative;
   padding: 125px 100px 60px;
 }
 .news h2 {
@@ -2908,7 +2929,7 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
-  margin: 0 0 37px;
+  margin: 0 0 36px;
   gap: 27px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2929,9 +2950,32 @@ button,
   border-radius: 20px;
 }
 
+.news__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider-news {
+  overflow: hidden;
+}
+.slider-news .slider-news__bullet {
+  bottom: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+
 .slider-news__list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 46px;
   list-style-type: none;
 }
 
@@ -2989,7 +3033,7 @@ button,
   line-height: 26px;
   color: #316dc2;
   letter-spacing: -1px;
-  width: 214px;
+  width: 75%;
   padding: 5px 0 0;
   margin: 0;
   background-color: #F0EFE9;
@@ -3023,7 +3067,7 @@ button,
   font-size: 12px;
   line-height: 12px;
   color: #316dc2;
-  padding: 8px 10px 4px 0;
+  padding: 8px 11px 4px 0;
   background-color: #F0EFE9;
   border-radius: 0 12px 0 0;
 }
@@ -3039,7 +3083,7 @@ button,
   left: 0;
 }
 .slider-news__date::after {
-  bottom: 0;
+  bottom: 1px;
   right: -16px;
 }
 
@@ -3051,8 +3095,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 241px;
-  padding: 9px 18px 12px 0;
+  width: 84%;
+  padding: 8px 18px 12px 0;
   background-color: #F0EFE9;
   border-radius: 0 12px 0 0;
 }
@@ -3076,6 +3120,37 @@ button,
   content: "";
 }
 
+.slider-news__bullet .swiper-pagination-bullet {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #316dc2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.slider-news__bullet .swiper-pagination-bullet-active {
+  color: #ffffff;
+  background-color: #316dc2;
+  opacity: 1;
+}
+
 .faq {
   padding: 60px 206px 60px;
 }
@@ -3086,8 +3161,9 @@ button,
   font-size: 50px;
   line-height: 50px;
   color: #316dc2;
+  letter-spacing: -2px;
   text-align: center;
-  margin: 0 0 73px;
+  margin: 10px 0 66px;
 }
 
 .accordion-faq {
@@ -3102,7 +3178,15 @@ button,
   border-radius: 16px;
 }
 .accordion-faq__element:not(:last-child) {
-  margin: 0 0 40px;
+  margin: 0 0 10px;
+}
+
+.accordion-faq__element.is-active {
+  background-color: #316dc2;
+  padding: 40px 40px 20px;
+}
+.accordion-faq__element.is-active h3 {
+  color: #ffffff;
 }
 
 .accordion-faq__title {
@@ -3123,6 +3207,8 @@ button,
   font-size: 28px;
   line-height: 34px;
   color: #316dc2;
+  letter-spacing: -1px;
+  width: 63%;
   margin: 0;
 }
 
@@ -3159,11 +3245,12 @@ button,
   font-size: 16px;
   line-height: 26px;
   color: #F0EFE9;
-  background-color: #316dc2;
+  margin: 0;
+  padding: 12px 200px 12px 0;
 }
 
 .reviews {
-  padding: 60px 100px 120px;
+  padding: 66px 100px 121px;
 }
 .reviews h2 {
   font-family: "Manrope", "Arial", sans-serif;
@@ -3176,17 +3263,31 @@ button,
   margin: 0 0 44px;
 }
 
+.reviews__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+}
+
+.slider-reviews {
+  overflow: hidden;
+}
+
 .slider-reviews__list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 41px;
   list-style-type: none;
 }
 
 .slider-reviews__item {
+  height: auto;
   padding: 50px 50px 42px;
   border: 1px #316dc2 solid;
   border-radius: 16px;
-  width: 604px;
 }
 
 .slider-reviews__content-slide {
@@ -3270,7 +3371,6 @@ button,
   font-size: 24px;
   line-height: 26px;
   color: #316dc2;
-  letter-spacing: -1px;
   margin: 0 0 14px;
 }
 .slider-reviews__description p {
@@ -3294,8 +3394,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 120px 100px;
-  gap: 80px;
+  padding: 108px 100px 120px;
+  gap: 74px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #316dc2;
@@ -3307,6 +3407,7 @@ button,
   font-size: 50px;
   line-height: 50px;
   color: #ffffff;
+  letter-spacing: -2px;
   margin: 0;
 }
 
@@ -3318,7 +3419,7 @@ button,
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 51px;
+  margin-right: 40px;
 }
 
 .contacts__item-title {
@@ -3329,7 +3430,7 @@ button,
   line-height: 12px;
   color: #F0EFE9;
   text-transform: uppercase;
-  margin: 0 0 24px;
+  margin: 11px 0 17px;
   opacity: 0.8;
 }
 
@@ -3368,7 +3469,7 @@ button,
 }
 .contacts__location-wrapper::after {
   position: absolute;
-  top: -40px;
+  top: -42px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -3395,7 +3496,7 @@ button,
 
 .feedback__form-wrapper {
   width: 498px;
-  padding: 70px 74px 51px;
+  padding: 83px 74px 50px;
   background-color: #316dc2;
   border-radius: 16px;
 }
@@ -3406,7 +3507,8 @@ button,
   font-size: 32px;
   line-height: 36px;
   color: #ffffff;
-  margin: 0 0 38px;
+  letter-spacing: -1px;
+  margin: 0 0 25px;
 }
 .feedback__form-wrapper p {
   font-family: "Manrope", "Arial", sans-serif;
@@ -3415,12 +3517,13 @@ button,
   font-size: 16px;
   line-height: 26px;
   color: #ffffff;
-  margin: 0 0 30px;
+  letter-spacing: -1px;
+  margin: 0 0 18px;
 }
 
 .feedback__form fieldset {
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0 0 37px;
   min-inline-size: auto;
   border: none;
 }
@@ -3439,10 +3542,16 @@ button,
   border: 1px rgba(255, 255, 255, 0.3) solid;
   border-radius: 8px;
 }
+.feedback__form textarea {
+  height: 96px;
+}
 
-.feedback__input,
+.feedback__input {
+  margin: 0 0 16px;
+}
+
 .feedback__textarea {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
 }
 
 .feedback__description-input,
@@ -3454,7 +3563,7 @@ button,
   line-height: 18px;
   color: #F0EFE9;
   display: block;
-  margin: 0 0 12px;
+  margin: 0 0 9px;
   opacity: 0.8;
 }
 
@@ -3483,7 +3592,7 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 50px 100px;
-  gap: 52px;
+  gap: 26px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -3495,11 +3604,11 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 52px;
+  gap: 51px;
 }
 
 .main-footer__nav-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 26px;
 }
 
 .main-footer__nav-link {
