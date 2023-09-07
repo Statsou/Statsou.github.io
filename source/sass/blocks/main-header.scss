@@ -39,6 +39,9 @@
   background-color: $color-default-white;
   gap: 20px;
 
+  transition: all 0.2s;
+  user-select: none;
+
   svg {
     width: 46px;
     height: 46px;
@@ -46,6 +49,42 @@
 
     border-radius: 50%;
     background-color: $color-cerulean-blue;
+  }
+
+  &:not(:disabled) {
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
+      outline: none;
+
+      cursor: pointer;
+
+      svg {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue;
+      }
+    }
+
+    @include active-button {
+      background-color: $color-cerulean-blue;
+      color: $color-white-opacity-70;
+
+      svg {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue-opacity;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  &:disabled {
+    color: $color-mischka;
+    border: 1px $color-mischka solid;
+    pointer-events: none;
+
+    svg {
+      background-color: $color-mischka;
+    }
   }
 }
 

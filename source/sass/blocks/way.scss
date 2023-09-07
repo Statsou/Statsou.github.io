@@ -1,7 +1,7 @@
 .way {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 125px 206px 107px 100px;
+  padding: 125px 206px 106px 100px;
 
   gap: 138px;
   background-color: $color-cerulean-blue;
@@ -27,9 +27,9 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-alabaster;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 
-    margin: 0 0 32px;
+    margin: 0 0 33px;
     padding: 0;
   }
 }
@@ -71,7 +71,7 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-alabaster;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 
     margin: 0;
   }

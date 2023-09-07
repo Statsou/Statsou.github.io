@@ -1,5 +1,5 @@
 export const swiperHero = function () {
-  return new Swiper('.swiper-hero', {
+  const sliderHero = new Swiper('.swiper-hero', {
     loop: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
@@ -11,4 +11,18 @@ export const swiperHero = function () {
       clickable: true,
     },
   });
+
+  const sliderHeroContent = new Swiper('.swiper-hero-content', {
+    loop: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  sliderHero.controller.control = sliderHeroContent;
+  sliderHeroContent.controller.control = sliderHero;
 }

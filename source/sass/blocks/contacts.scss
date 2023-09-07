@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 108px 100px 120px;
+  padding: 109px 100px 120px;
 
   gap: 74px;
   flex-wrap: wrap;
@@ -15,7 +15,7 @@
     font-size: 50px;
     line-height: 50px;
     color: $color-default-white;
-    letter-spacing: -2px;
+    letter-spacing: -1.7px;
 
     margin: 0;
   }
@@ -28,7 +28,11 @@
 
 .contacts__item {
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 54px;
+  }
+
+  &:first-child {
+    margin-right: 33px;
   }
 }
 
@@ -40,6 +44,7 @@
   line-height: 12px;
   color: $color-alabaster;
   text-transform: uppercase;
+  letter-spacing: -0.5px;
 
   margin: 11px 0 17px;
   opacity: 0.8;
@@ -50,6 +55,7 @@
 
   p {
     width: 285px;
+    letter-spacing: -0.5px;
   }
 
   p,
@@ -60,9 +66,35 @@
     font-size: 16px;
     line-height: 24px;
     color: $color-default-white;
+    letter-spacing: -0.5px;
 
     margin: 0;
     padding: 0
+  }
+}
+
+.contacts__link {
+  &:not(.disabled) {
+    @include hover {
+      border-bottom: 1px $color-default-white solid;
+      transition: all 0.2s;
+    }
+
+    @include focus {
+      border-bottom: 1px $color-default-white solid;
+      transition: all 0.2s;
+    }
+
+    @include active {
+      border: none;
+      opacity: 0.8;
+      transition: all 0.2s;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 }
 

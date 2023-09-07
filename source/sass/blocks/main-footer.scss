@@ -15,7 +15,7 @@
 }
 
 .main-footer__nav-item:not(:last-child) {
-  margin-right: 26px;
+  margin-right: 30px;
 }
 
 .main-footer__nav-link {
@@ -25,6 +25,29 @@
   font-size: 16px;
   line-height: 26px;
   color: $color-charcoal;
+  letter-spacing: -0.5px;
+
+  &:not(.disabled) {
+    @include hover {
+      color: $color-cerulean-blue;
+      transition: all 0.2s;
+    }
+
+    @include focus {
+      color: $color-cerulean-blue;
+      transition: all 0.2s;
+    }
+
+    @include active {
+      color: $color-endeavour;
+      transition: all 0.2s;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
 .main-footer__social-item:not(:last-child) {
@@ -43,6 +66,37 @@
 
   svg {
     fill: $color-default-white;
+  }
+
+  &:not(.disabled) {
+    @include hover {
+      svg {
+        opacity: 0.5;
+        transition: all 0.2s;
+      }
+    }
+
+    @include focus {
+      svg {
+        opacity: 0.5;
+        transition: all 0.2s;
+      }
+    }
+
+    @include active {
+      background-color: $color-endeavour;
+      transition: all 0.2s;
+
+      svg {
+        opacity: 1;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
   }
 }
 
@@ -77,8 +131,35 @@
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
+  letter-spacing: -0.5px;
 }
 
 .main-footer__copyright-link {
+  letter-spacing: -0.4px;
   border-bottom: 1px $color-charcoal solid;
+
+  &:not(.disabled) {
+    @include hover {
+      color: $color-cerulean-blue;
+      border-bottom: 1px $color-cerulean-blue solid;
+      transition: all 0.2s;
+    }
+
+    @include focus {
+      color: $color-cerulean-blue;
+      border-bottom: 1px $color-cerulean-blue solid;
+      transition: all 0.2s;
+    }
+
+    @include active {
+      color: $color-endeavour;
+      border-bottom: 1px $color-endeavour solid;
+      transition: all 0.2s;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
 }

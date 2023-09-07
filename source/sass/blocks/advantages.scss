@@ -24,7 +24,7 @@
   display: flex;
 
   width: 478px;
-  padding: 30px 59px;
+  padding: 30px 49px 30px 59px;
 
   border: 1px $color-default-white solid;
   border-radius: 20px;
@@ -51,7 +51,7 @@
     line-height: 20px;
     color: $color-alabaster;
     text-transform: lowercase;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 
     margin: 0;
   }
@@ -72,7 +72,7 @@
   }
 
   &--2 {
-    padding: 30px 43px 30px 59px;
+    padding: 30px 33px 30px 59px;
   }
 
   &--3 {
@@ -85,7 +85,7 @@
     }
 
     p {
-      width: 190px;
+      min-width: 192px;
     }
   }
 }

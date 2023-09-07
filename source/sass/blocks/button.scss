@@ -9,6 +9,10 @@
   background-color: $color-transparent;
   gap: 30px;
 
+  user-select: none;
+  transition: all 0.2s;
+  cursor: pointer;
+
   .button__incription {
     font-family: "Manrope", "Arial", sans-serif;
     font-style: normal;
@@ -16,6 +20,8 @@
     font-size: 14px;
     line-height: 14px;
     color: $color-cerulean-blue;
+    letter-spacing: -0.4px;
+
     text-transform: uppercase;
   }
 
@@ -28,6 +34,64 @@
 
     border-radius: 44px;
     background-color: $color-cerulean-blue;
+
+    transition: all 0.3s;
+  }
+
+  &:not(:disabled) {
+    @include hover-focus {
+      background-color: $color-cerulean-blue;
+      outline: none;
+
+      transition: all 0.2s;
+
+      cursor: pointer;
+
+      .button__incription {
+        color: $color-default-white;
+        transition: all 0.2s;
+      }
+
+      svg {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue;
+
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+    }
+
+    @include active-button {
+      background-color: $color-cerulean-blue;
+
+      .button__incription {
+        color: $color-white-opacity-70;
+        transition: all 0.2s;
+      }
+
+      svg {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue-opacity;
+
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &:disabled {
+    border: 1px $color-mischka solid;
+    cursor: initial;
+
+    .button__incription {
+      color: $color-mischka;
+      pointer-events: none;
+    }
+
+    svg {
+      background-color: $color-mischka;
+      pointer-events: none;
+    }
   }
 }
 

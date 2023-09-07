@@ -6,6 +6,7 @@
   line-height: 14px;
   color: $color-cerulean-blue;
   text-transform: uppercase;
+  letter-spacing: -0.5px;
 
   display: flex;
   align-items: center;
@@ -16,6 +17,86 @@
   border: 1px $color-cerulean-blue solid;
   background-color: $color-transparent;
   gap: 30px;
+
+  transition: all 0.2s;
+  user-select: none;
+
+  &:not(.disabled) {
+    @include hover {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
+      outline: none;
+
+      cursor: pointer;
+
+      .link-primary__link-icon {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue;
+
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+    }
+
+    @include focus {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
+      outline: none;
+
+      .link-primary__link-icon {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue;
+
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+    }
+
+    @include active {
+      background-color: $color-cerulean-blue;
+      color: $color-white-opacity-70;
+
+      .link-primary__link-icon {
+        background-color: $color-default-white;
+        stroke: $color-cerulean-blue-opacity;
+
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &.disabled {
+    color: $color-mischka;
+    border: 1px $color-mischka solid;
+
+    pointer-events: none;
+    cursor: initial;
+
+    svg {
+      background-color: $color-mischka;
+    }
+  }
+
+  &--small {
+    &:not(.disabled) {
+      @include hover {
+        background-color: $color-default-white;
+      }
+
+      @include focus {
+        background-color: $color-default-white;
+      }
+
+      @include active {
+        background-color: $color-default-white;
+      }
+    }
+
+    &.disabled {
+      background-color: $color-mischka;
+    }
+  }
 }
 
 .link-primary__link-icon {
@@ -27,6 +108,8 @@
 
   border-radius: 44px;
   background-color: $color-cerulean-blue;
+
+  transition: all 0.3s;
 }
 
 .link-primary--small {
