@@ -3,8 +3,11 @@ export const swiperNews = function () {
     loop: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: false,
-    slidesPerView: 'auto',
-    spaceBetween: 32,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grid: {
+      rows: 2,
+    },
     navigation: {
       nextEl: '.swiper-news-button-next',
       prevEl: '.swiper-news-button-prev',
@@ -14,6 +17,22 @@ export const swiperNews = function () {
       clickable: true,
       renderBullet: function (index, className) {
         return `<span class="${className}">${index + 1}</span>`;
+      },
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+        },
+      },
+      1200: {
+        spaceBetween: 32,
+        slidesPerView: 'auto',
+        grid: {
+          rows: 1,
+        },
       },
     },
   });

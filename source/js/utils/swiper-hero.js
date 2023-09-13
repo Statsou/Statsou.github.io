@@ -16,11 +16,17 @@ export const swiperHero = function () {
     loop: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    spaceBetween: 30,
     autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    breakpoints: {
+      768: {
+        spaceBetween: 0,
+      },
+    }
   });
 
   sliderHero.controller.control = sliderHeroContent;

@@ -8,26 +8,26 @@
     <title>Project Masa</title>
 
     <link rel="icon" href="favicon/favicon.ico">
-    <link rel="icon" href=".favicon/favicon-vector.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href=".favicon/favicon-120.png">
-
-    <link rel="stylesheet" href="css/style.min.css">
-
+    <link rel="icon" href="favicon/favicon-vector.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/favicon-120.png">
 
     <link rel="preload" href="fonts/manrope-light-300.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/manrope-regular-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/manrope-medium-500.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="main-header">
+        <div class="main-header__overlay"></div>
         <div class="main-header__container">
           <a class="main-header__logo-link" href="index.html">
             <img class="main-header__logo" src="./img/logotype.svg" width="52" height="52" alt="Логотип проекта Маса.">
           </a>
 
           <nav class="main-header__navigation">
-            <button class="main-header__navigation-button">
+            <button class="main-header__navigation-button" type="button">
               <span class="main-header__incription-button">Меню</span>
               <svg class="main-header__burger-icon" width="20" height="10" viewBox="0 0 20 10" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#burger"></use>
@@ -76,16 +76,16 @@
 
                 <ul class="main-header__sub-menu-list">
                   <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Стажировки</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
                     <a class="main-header__sub-menu-link" href="#">Волонтёрство</a>
                   </li>
                   <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Учёба</a>
+                    <a class="main-header__sub-menu-link" href="#">Стажировки</a>
                   </li>
                   <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Религия</a>
+                    <a class="main-header__sub-menu-link" href="#">Карьера</a>
+                  </li>
+                  <li class="main-header__sub-menu-item">
+                    <a class="main-header__sub-menu-link" href="#">Путешествия</a>
                   </li>
                 </ul>
               </li>
@@ -98,60 +98,13 @@
         </div>
       </header>
       <main>
-        <h1 class="visually-hidden">Программы в Израиле для еврейской молодежи</h1>
+        <h1 class="visually-hidden">Программы в Израиле для молодежи</h1>
         <section class="hero">
           <div class="slider-hero swiper-hero">
             <ul class="slider-hero__list swiper-wrapper">
-              <li class="slider-hero__item slider-hero__item--1 swiper-slide">
-                <!-- <div class="slider-hero__content-slide">
-                  <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
-                  <div class="slider-hero__under-wrapper">
-                    <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
-                    <div class="slider-hero__link-wrapper">
-                      <a class="slider-hero__link link-primary" href="#">
-                        <span class="link-primary__incription">Подробнее</span>
-                        <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-                          <use xlink:href="img/sprite.svg#arrow-link"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div> -->
-              </li>
-
-              <li class="slider-hero__item slider-hero__item--2 swiper-slide">
-                <!-- <div class="slider-hero__content-slide">
-                  <h2>Волонтёрские программы&nbsp;&mdash; внесите свой вклад в&nbsp;общество</h2>
-                  <div class="slider-hero__under-wrapper">
-                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
-                    <div class="slider-hero__link-wrapper">
-                      <a class="slider-hero__link link-primary" href="#">
-                        <span class="link-primary__incription">Подробнее</span>
-                        <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-                          <use xlink:href="img/sprite.svg#arrow-link"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div> -->
-              </li>
-
-              <li class="slider-hero__item slider-hero__item--3 swiper-slide">
-                <!-- <div class="slider-hero__content-slide slider-hero__content-slide--custom">
-                  <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
-                  <div class="slider-hero__under-wrapper slider-hero__under-wrapper--custom">
-                    <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
-                    <div class="slider-hero__link-wrapper">
-                      <a class="slider-hero__link link-primary" href="#">
-                        <span class="link-primary__incription">Подробнее</span>
-                        <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-                          <use xlink:href="img/sprite.svg#arrow-link"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div> -->
-              </li>
+              <li class="slider-hero__item slider-hero__item--1 swiper-slide"></li>
+              <li class="slider-hero__item slider-hero__item--2 swiper-slide"></li>
+              <li class="slider-hero__item slider-hero__item--3 swiper-slide"></li>
             </ul>
           </div>
 
@@ -230,7 +183,7 @@
             </p>
           </div>
 
-          <button class="about__button button button--primary" data-open-modal="feedback">
+          <button class="about__button button button--primary" type="button" data-open-modal="feedback">
             <span class="button__incription">Подробнее о проекте</span>
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#arrow-link"></use>
@@ -261,10 +214,10 @@
                 </p>
               </li>
 
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--4">
                 <h3>Участники из&nbsp;60 стран</h3>
                 <p>
-                  Студенты со всего мира приезжают на&nbsp;программу &laquo;Маса&raquo;
+                  студенты со&nbsp;всего мира приезжают на&nbsp;программу &laquo;Маса&raquo;
                 </p>
               </li>
             </ul>
@@ -368,25 +321,24 @@
                 </div>
               </li>
             </ul>
-
+            <div class="slider-programs__bullet swiper-pagination"></div>
           </div>
 
-          <div class="slider-programs__bullet swiper-pagination"></div>
 
-            <div class="programs__navigation">
-              <button class="button-slider button-slider--prev swiper-programs-button-prev" id="swiperPrevPrograms" type="button">
-                <span class="visually-hidden">Предыдущий слайдер</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#arrow-slider"></use>
-                </svg>
-              </button>
-              <button class="button-slider button-slider--next swiper-programs-button-next" id="swiperNextPrograms" type="button">
-                <span class="visually-hidden">Следующий слайдер</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#arrow-slider"></use>
-                </svg>
-              </button>
-            </div>
+          <div class="programs__navigation">
+            <button class="button-slider button-slider--prev swiper-programs-button-prev" id="swiperPrevPrograms" type="button">
+              <span class="visually-hidden">Предыдущий слайдер</span>
+              <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#arrow-slider"></use>
+              </svg>
+            </button>
+            <button class="button-slider button-slider--next swiper-programs-button-next" id="swiperNextPrograms" type="button">
+              <span class="visually-hidden">Следующий слайдер</span>
+              <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#arrow-slider"></use>
+              </svg>
+            </button>
+          </div>
         </section>
 
         <section class="way" id="way">
@@ -480,6 +432,23 @@
 
               <li class="slider-news__item slider-news__item--3 swiper-slide">
                 <div class="slider-news__content-slide">
+                  <span class="slider-news__date">10/03/2023</span>
+                  <h3>Построй свою карьеру</h3>
+                  <div class="slider-news__under-wrapper">
+                    <p>Ведущие компании готовы&nbsp;трудоустроить выпускников стажировки</p>
+                    <div class="slider-news__link-wrapper">
+                      <a class="slider-news__link link-primary link-primary--small" href="#">
+                        <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                          <use xlink:href="img/sprite.svg#arrow-link"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slider-news__item slider-news__item--4 swiper-slide">
+                <div class="slider-news__content-slide">
                   <span class="slider-news__date">17/03/2023</span>
                   <h3>Новая программа волонтёрства</h3>
                   <div class="slider-news__under-wrapper">
@@ -493,7 +462,38 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--4 swiper-slide">
+
+              <li class="slider-news__item slider-news__item--1 slider-news__item--dublicate swiper-slide">
+                <div class="slider-news__content-slide">
+                  <span class="slider-news__date">23/03/2023</span>
+                  <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                  <div class="slider-news__under-wrapper">
+                    <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
+                    <a class="slider-news__link link-primary link-primary--small" href="#">
+                      <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#arrow-link"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slider-news__item slider-news__item--2 slider-news__item--dublicate swiper-slide">
+                <div class="slider-news__content-slide">
+                  <span class="slider-news__date">20/03/2023</span>
+                  <h3>Путешествуем по&nbsp;Израилю</h3>
+                  <div class="slider-news__under-wrapper">
+                    <p>Какие места посещают наши студенты весной</p>
+                    <a class="slider-news__link link-primary link-primary--small" href="#">
+                      <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#arrow-link"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slider-news__item slider-news__item--3 swiper-slide">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">10/03/2023</span>
                   <h3>Построй свою карьеру</h3>
@@ -510,13 +510,12 @@
                 </div>
               </li>
 
-
-              <li class="slider-news__item slider-news__item--1 swiper-slide">
+              <li class="slider-news__item slider-news__item--4 swiper-slide">
                 <div class="slider-news__content-slide">
-                  <span class="slider-news__date">23/03/2023</span>
-                  <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                  <span class="slider-news__date">17/03/2023</span>
+                  <h3>Новая программа волонтёрства</h3>
                   <div class="slider-news__under-wrapper">
-                    <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
+                    <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
                     <a class="slider-news__link link-primary link-primary--small" href="#">
                       <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
                         <use xlink:href="img/sprite.svg#arrow-link"></use>
@@ -526,22 +525,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--2 swiper-slide">
-                <div class="slider-news__content-slide">
-                  <span class="slider-news__date">20/03/2023</span>
-                  <h3>Путешествуем по&nbsp;Израилю</h3>
-                  <div class="slider-news__under-wrapper">
-                    <p>Какие места посещают наши студенты весной</p>
-                    <a class="slider-news__link link-primary link-primary--small" href="#">
-                      <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#arrow-link"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li class="slider-news__item slider-news__item--3 swiper-slide">
+              <li class="slider-news__item slider-news__item--4 swiper-slide">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">17/03/2023</span>
                   <h3>Новая программа волонтёрства</h3>
@@ -587,13 +571,10 @@
               </div>
 
               <div class="accordion-faq__content" data-accordion="content">
-                <!-- Нужна ли эта обертка?? -->
-                <div class="accordion-faq__wrapper">
-                  <p>
-                    Организатором программы является проект &laquo;Маса&raquo; в&nbsp;сотрудничестве с&nbsp;образовательными
-                    учреждениями. Сроки программы обмена могут варьироваться от&nbsp;одного семестра до&nbsp;года.
-                  </p>
-                </div>
+                <p>
+                  Организатором программы является проект &laquo;Маса&raquo; в&nbsp;сотрудничестве с&nbsp;образовательными
+                  учреждениями. Сроки программы обмена могут варьироваться от&nbsp;одного семестра до&nbsp;года.
+                </p>
               </div>
             </li>
 
@@ -605,13 +586,10 @@
               </div>
 
               <div class="accordion-faq__content" data-accordion="content">
-                <!-- Нужна ли эта обертка?? -->
-                <div class="accordion-faq__wrapper">
-                  <p>
-                    Грант на&nbsp;обучение&nbsp;&mdash; это финансовая поддержка, которую предоставляет организатор
-                    программы обмена студентами для оплаты учебных расходов.
-                  </p>
-                </div>
+                <p>
+                  Грант на&nbsp;обучение&nbsp;&mdash; это финансовая поддержка, которую предоставляет организатор
+                  программы обмена студентами для оплаты учебных расходов.
+                </p>
               </div>
             </li>
 
@@ -623,31 +601,27 @@
               </div>
 
               <div class="accordion-faq__content" data-accordion="content">
-                <!-- Нужна ли эта обертка?? -->
-                <div class="accordion-faq__wrapper">
-                  <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления. В&nbsp;большинстве
-                    случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы, и&nbsp;поэтому предусматривается
-                    определённая доля личного участия.</p>
-                </div>
+                <p>
+                  Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления. В&nbsp;большинстве
+                  случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы, и&nbsp;поэтому предусматривается
+                  определённая доля личного участия.
+                </p>
               </div>
             </li>
 
             <li class="accordion-faq__element accordion-faq__element--custom" data-accordion="element">
               <div class="accordion-faq__title">
-                <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для&nbsp;дальнейшего обучения?</h3>
+                <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для дальнейшего обучения?</h3>
                 <span class="visually-hidden">Развернуть ответ.</span>
                 <button class="accordion-faq__button" type="button" data-accordion="button"></button>
               </div>
 
               <div class="accordion-faq__content" data-accordion="content">
-                <!-- Нужна ли эта обертка?? -->
-                <div class="accordion-faq__wrapper">
-                  <p>
-                    Студенты, участвующие в&nbsp;проекте, могут использовать полученные знания и&nbsp;навыки в&nbsp;своей будущей
-                    профессиональной деятельности или продолжить обучение в&nbsp;высших учебных заведениях. Кроме того, многие
-                    университеты и&nbsp;колледжи предоставляют кредиты за&nbsp;участие в&nbsp;программе обмена студентами.
-                  </p>
-                </div>
+                <p>
+                  Студенты, участвующие в&nbsp;проекте, могут использовать полученные знания и&nbsp;навыки в&nbsp;своей будущей
+                  профессиональной деятельности или продолжить обучение в&nbsp;высших учебных заведениях. Кроме того, многие
+                  университеты и&nbsp;колледжи предоставляют кредиты за&nbsp;участие в&nbsp;программе обмена студентами.
+                </p>
               </div>
             </li>
 
@@ -659,15 +633,12 @@
               </div>
 
               <div class="accordion-faq__content" data-accordion="content">
-                <!-- Нужна ли эта обертка?? -->
-                <div class="accordion-faq__wrapper">
-                  <p>
-                    Процесс регистрации на&nbsp;программу обмена включает выбор университета-партнера и&nbsp;программы обмена,
-                    общение с&nbsp;координатором программы, заполнение заявления и&nbsp;предоставление необходимых документов,
-                    прохождение интервью, оформление визы, жилья и&nbsp;страховки, обучение по&nbsp;безопасности за&nbsp;границей
-                    и&nbsp;подписание договора об&nbsp;участии в&nbsp;программе. Подробнее можно узнать позвонив в&nbsp;центр.
-                  </p>
-                </div>
+                <p>
+                  Процесс регистрации на&nbsp;программу обмена включает выбор университета-партнера и&nbsp;программы обмена,
+                  общение с&nbsp;координатором программы, заполнение заявления и&nbsp;предоставление необходимых документов,
+                  прохождение интервью, оформление визы, жилья и&nbsp;страховки, обучение по&nbsp;безопасности за&nbsp;границей
+                  и&nbsp;подписание договора об&nbsp;участии в&nbsp;программе. Подробнее можно узнать позвонив в&nbsp;центр.
+                </p>
               </div>
             </li>
           </ul>
@@ -682,7 +653,7 @@
                   <div class="slider-reviews__person-wrapper">
                     <picture>
                       <source srcset="./img/reviews/reviews-avatar-1.webp 1x, ./img/reviews/reviews-avatar-1@2x.webp 2x" type="image/webp" width="90" height="90">
-                      <img class="slider-reviews__avatar" src="./img/reviews/reviews-avatar-1.png" srcset="./img/reviews/reviews-avatar-1@2x.png 2x" alt="Аватар участвовашего в проекте Маса.">
+                      <img class="slider-reviews__avatar" src="./img/reviews/reviews-avatar-1.png" srcset="./img/reviews/reviews-avatar-1@2x.png 2x" width="90" height="90" alt="Аватар участвовашего в проекте Маса.">
                     </picture>
                     <h3>Сара Аврахам</h3>
                   </div>
@@ -703,7 +674,7 @@
                     <p>
                       Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим получить незабываемые
                       впечатления. Сочетание путешествий, общения и&nbsp;значимой работы действительно отличает её&nbsp;от&nbsp;других
-                      программ, и&nbsp;я&nbsp;чувствую огромную благодарность за&nbsp;предоставленную мне возможность.
+                      программ, и&nbsp;я чувствую огромную благодарность за&nbsp;предоставленную мне возможность.
                     </p>
                   </div>
                 </div>
@@ -836,28 +807,27 @@
                 </div>
               </li>
             </ul>
-
             <div class="slider-reviews__bullet swiper-pagination"></div>
+          </div>
 
-            <div class="reviews__navigation">
-              <button class="button-slider button-slider--prev swiper-reviews-button-prev" id="swiperPrevReviews" type="button">
-                <span class="visually-hidden">Предыдущий слайдер</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#arrow-slider"></use>
-                </svg>
-              </button>
-              <button class="button-slider button-slider--next swiper-reviews-button-next" id="swiperNextReviews" type="button">
-                <span class="visually-hidden">Следующий слайдер</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#arrow-slider"></use>
-                </svg>
-              </button>
-            </div>
+          <div class="reviews__navigation">
+            <button class="button-slider button-slider--prev swiper-reviews-button-prev" id="swiperPrevReviews" type="button">
+              <span class="visually-hidden">Предыдущий слайдер</span>
+              <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#arrow-slider"></use>
+              </svg>
+            </button>
+            <button class="button-slider button-slider--next swiper-reviews-button-next" id="swiperNextReviews" type="button">
+              <span class="visually-hidden">Следующий слайдер</span>
+              <svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#arrow-slider"></use>
+              </svg>
+            </button>
           </div>
         </section>
 
         <section class="contacts" id="contacts">
-          <!-- <div class="contacts__title"> -->
+          <div class="contacts__wrapper">
             <h2>Контакты</h2>
             <dl class="contacts__list">
               <div class="contacts__item">
@@ -883,11 +853,11 @@
                 </dd>
               </div>
             </dl>
-          <!-- </div> -->
 
-          <div class="contacts__location-wrapper">
-            <h2 class="visually-hidden">Карта</h2>
-            <div class="contacts__location-map" id="map"></div>
+            <div class="contacts__location-wrapper">
+              <h2 class="visually-hidden">Карта</h2>
+              <div class="contacts__location-map" id="map"></div>
+            </div>
           </div>
         </section>
 
@@ -901,42 +871,42 @@
                 <form action="https://echo.htmlacademy.ru/" method="post">
                   <fieldset>
                     <div class="feedback__input" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                      <label class="feedback__label">
-                        <span class="feedback__description-input">Имя</span>
-                        <input type="text" name="name">
-                      </label>
+                      <input type="text" name="name" id="name">
+                      <label class="feedback__label" for="name">Имя</label>
                     </div>
 
                     <div class="feedback__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                      <label class="feedback__label">
-                        <span class="feedback__description-input">Телефон</span>
-                        <input type="tel" name="phone">
-                      </label>
+                      <input type="tel" name="phone" id="phone">
+                      <label class="feedback__label" for="phone">Телефон</label>
                     </div>
 
-                    <div class="feedback__textarea" data-validate-type="text" data-on-input-validate="data-on-input-validate">
-                      <label class="feedback__label">
-                        <span class="feedback__description-input">Ваше сообщение</span>
-                        <textarea name="messeage"></textarea>
-                      </label>
+                    <div class="feedback__input feedback__input--textarea" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <textarea name="messeage" id="messeage"></textarea>
+                      <label class="feedback__label" for="messeage">Ваше сообщение</label>
                     </div>
 
-                    <!-- Разобраться со стилями селекта и чекбокса и подгрузить свежую валидацию -->
-                    <div class="feedback__select custom-select" data-validate-type="text" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-2">
-                      <span class="feedback__description-select">Выберите город</span>
-                      <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                    <div class="feedback__select custom-select" data-select="data-select" data-validate-type="select" data-name="city" data-required="data-required">
+                      <button class="custom-select__button" type="button" aria-label="Ваш город проживания">
+                        <span class="custom-select__text"></span>
+                        <span class="custom-select__icon"></span>
+                      </button>
+                      <span class="custom-select__description">Выберите город</span>
                       <ul class="custom-select__list" role="listbox">
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Санкт-Петербург</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
                       </ul>
                     </div>
 
-                    <div class="feedback__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                    <div class="feedback__toggle custom-toggle" data-validate-type="checkbox">
                       <label>
                         <input type="checkbox" value="true" name="Я согласен на обработку моих персональных данных"/>
-                        <span class="custom-toggle__icon"></span>
+                        <span class="custom-toggle__icon">
+                          <svg width="10" height="8" viewBox="0 0 10 8" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#checkbox-true"></use>
+                          </svg>
+                        </span>
                         <span class="custom-toggle__label">Я согласен на обработку моих персональных данных</span>
                       </label>
                     </div>
@@ -1011,7 +981,7 @@
 
         <div class="main-footer__wrapper-secundary">
           <span class="main-footer__copyright">Masa © 2023 Все права защищены</span>
-          <a class="main-footer__copyright-link disabled" href="#">Политика конфиденциальности</a>
+          <a class="main-footer__copyright-link" href="#">Политика конфиденциальности</a>
         </div>
       </footer>
     </div>
@@ -1026,44 +996,45 @@
           <div class="modal__form" data-form-validate="data-form-validate" data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post">
               <fieldset>
+
                 <div class="modal__input" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <label class="modal__label">
-                    <span class="modal__description-input">Имя</span>
-                    <input type="text" name="name">
-                  </label>
+                  <input type="text" name="name" id="name">
+                  <label class="modal__label" for="name">Имя</label>
                 </div>
 
                 <div class="modal__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <label class="modal__label">
-                    <span class="modal__description-input">Телефон</span>
-                    <input type="tel" name="phone">
-                  </label>
+                  <input type="tel" name="phone" id="phone">
+                  <label class="modal__label" for="phone">Телефон</label>
                 </div>
 
-                <!-- Разобраться со стилями селекта и чекбокса и подгрузить свежую валидацию -->
-                <!-- <div class="popup__select custom-select" data-validate-type="text" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-2">
-                  <span class="popup__label">Выберите город</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Санкт-Петербург</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                <div class="modal__select custom-select custom-select--dark" data-validate-type="text" data-select="data-select" data-validate-type="select" data-name="city" data-required="data-required">
+                  <button class="custom-select__button custom-select__button--dark" type="button" aria-label="Ваш город проживания">
+                    <span class="custom-select__text custom-select__text--dark"></span>
+                    <span class="custom-select__icon custom-select__icon--dark"></span>
+                  </button>
+                  <span class="custom-select__description custom-select__description--dark">Выберите город</span>
+                  <ul class="custom-select__list custom-select__list--dark" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург" aria-selected="false" role="option">Санкт-Петербург</li>
                   </ul>
-                </div> -->
+                </div>
 
-                <div>
-                  <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                    <label>
-                      <input type="checkbox" value="true" name="Я согласен на обработку моих персональных данных"/>
-                      <span class="custom-toggle__icon"></span>
-                      <span class="custom-toggle__label">Я согласен на обработку моих персональных данных</span>
-                    </label>
-                  </div>
+                <div class="modal__toggle custom-toggle" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" value="true" name="Я согласен на обработку моих персональных данных"/>
+                    <span class="custom-toggle__icon custom-toggle__icon--dark">
+                      <svg width="10" height="8" viewBox="0 0 10 8" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#checkbox-true"></use>
+                      </svg>
+                    </span>
+                    <span class="custom-toggle__label custom-toggle__label--dark">Я согласен на обработку моих персональных данных</span>
+                  </label>
                 </div>
               </fieldset>
               <span class="visually-hidden">Отправить заявку на обратную связь.</span>
-              <button class="modal__submit button button--primary" type="submit">
+              <button class="modal__submit button button--primary button--modal" type="submit">
                 <span class="button__incription">Отправить</span>
                 <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#arrow-link"></use>
@@ -1071,7 +1042,7 @@
               </button>
               <button class="modal__close-button" type="button" aria-label="Закрыть попап" data-close-modal>
                 <svg width="20" height="20" viewBox="0 0 20 20">
-                  <use xlink:href="img/sprite.svg#close-popup"></use>
+                  <use xlink:href="img/sprite.svg#close-modal"></use>
                 </svg>
               </button>
             </form>

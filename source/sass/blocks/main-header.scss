@@ -2,20 +2,105 @@
   position: absolute;
   width: 100%;
   z-index: 2;
+
+  @include vp-767 {
+    position: static;
+    background-color: rgba($color-cerulean-blue, 0.7);
+
+    &.is-active {
+      position: absolute;
+      background-color: $color-transparent;
+    }
+  }
+
+  &.is-open {
+    &::after {
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background-color: $dark-overlay;
+
+      content: "";
+    }
+  }
+}
+
+.main-header__overlay {
+  position: absolute;
+  top: 0;
+
+  display: none;
+  width: 100%;
+  height: 100vh;
+
+  background-color: $dark-overlay;
+
+  z-index: 10;
+  cursor: pointer;
+  content: "";
+
+  &.is-open {
+    display: block;
+  }
 }
 
 .main-header__container {
   position: relative;
 
+  max-width: 1440px;
   padding: 29px 100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   flex-wrap: wrap;
+
+  @include vp-1199 {
+    padding: 30px 45px;
+  }
+
+  @include vp-767 {
+    padding: 21px 15px;
+  }
 }
 
 .main-header__logo {
   margin: 0 0 3px;
+}
+
+.main-header__navigation {
+  position: relative;
+  width: 286px;
+
+
+  transition: 0.3s ease-out;
+
+  // @include vp-767 {
+  //   padding: 0 0 0 60px;
+  //   position: absolute;
+  // }
+
+  &.is-active {
+    padding: 0 0 0 152px;
+
+    @include vp-767 {
+      position: absolute;
+      right: 15px;
+
+      width: 290px;
+      padding: 0 0 0 156px;
+    }
+  }
+
+  &.is-open {
+    padding: 0;
+    transition: 0.3s ease-out;
+    z-index: 11;
+  }
 }
 
 .main-header__navigation-button {
@@ -24,23 +109,26 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  color: $color-cerulean-blue;
+  color: $color-default-white;
   letter-spacing: -1px;
   text-transform: uppercase;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding: 4px 4px 4px 20px;
   margin-left: auto;
-  margin-bottom: 4px; // Эту строчку добавить с js
+  margin-bottom: 3px;
 
   border-radius: 30px;
   border: 1px $color-cerulean-blue solid;
-  background-color: $color-default-white;
+  background-color: $color-cerulean-blue;
   gap: 20px;
 
   transition: all 0.2s;
   user-select: none;
+  pointer-events: none;
 
   svg {
     width: 46px;
@@ -49,6 +137,11 @@
 
     border-radius: 50%;
     background-color: $color-cerulean-blue;
+    visibility: hidden;
+
+    @include vp-767 {
+      padding: 13px;
+    }
   }
 
   &:not(:disabled) {
@@ -86,33 +179,106 @@
       background-color: $color-mischka;
     }
   }
+
+  &.is-active {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+    pointer-events: initial;
+
+    svg {
+      visibility: visible;
+    }
+  }
+
+  &.is-open {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+
+    svg {
+      background-color: $color-default-white;
+    }
+  }
 }
 
 .main-header__burger-icon {
+  display: block;
   stroke: $color-default-white;
+  flex-shrink: 0;
+
+  &.is-open {
+    display: none;
+  }
 }
 
 .main-header__close-icon {
   display: none;
   stroke: $color-cerulean-blue;
+  flex-shrink: 0;
+
+  &.is-open {
+    display: block;
+  }
 }
 
 .main-header__menu-list {
-  display: none; // Эту строчку добавить с js
+  position: absolute;
+  right: 0;
+
   min-width: 286px;
   margin: 0;
-  padding: 35px 25px;
+  padding: 29px 25px;
 
   background-color: $color-cerulean-blue;
   border-radius: 16px;
   list-style-type: none;
+
+  @include vp-767 {
+    position: static;
+
+    &.is-active {
+      position: absolute;
+    }
+  }
+
+  &.is-active {
+    max-height: 0;
+    padding: 0 25px;
+
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &.is-open {
+    display: block;
+    max-height: 100vh;
+    padding: 29px 25px;
+
+    transition: 0.4s ease-out;
+  }
 }
 
 .main-header__sub-menu-list {
-  display: none; // Эту строчку добавить с js
   margin: 0;
   padding: 0;
   list-style-type: none;
+  padding: 0 16px;
+
+  &.is-active {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+
+  &.is-open {
+    padding: 9px 16px 0;
+    max-height: 100vh;
+    transition: 0.9s ease-out;
+  }
 }
 
 .main-header__menu-link,
@@ -124,8 +290,28 @@
   font-size: 16px;
   line-height: 16px;
   color: $color-default-white;
+  letter-spacing: -0.5px;
 
   opacity: 0.7;
+
+  &:not(.disabled) {
+    @include hover-focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    @include active {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    color: $color-mischka;
+    opacity: 0.3;
+
+    pointer-events: none;
+    cursor: initial;
+  }
 }
 
 .main-header__menu-link,
@@ -133,14 +319,43 @@
   text-transform: uppercase;
 }
 
-.main-header__menu-item:not(:last-child) {
-  margin-bottom: 28px;
+.main-header__sub-menu-title {
+  position: relative;
+
+  padding: 0 30px 0 0;
+
+  &::before {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+
+    width: 11px;
+    height: 5px;
+
+    background-color: $color-default-white;
+    opacity: 0.7;
+
+    transition: transform 0.3s ease;
+
+    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+
+    content: "";
+  }
+
+  &.is-open {
+    opacity: 1;
+
+    &::before {
+      opacity: 1;
+      transform: rotate(-180deg);
+    }
+  }
 }
 
-.main-header__sub-menu-list {
-  padding: 16px 20px 0;
+.main-header__menu-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .main-header__sub-menu-item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }

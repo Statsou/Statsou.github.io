@@ -1,10 +1,13 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {activeMenu} from './utils/active-menu';
 import {swiperHero} from './utils/swiper-hero';
 import {swiperPrograms} from './utils/swiper-programs';
 import {swiperNews} from './utils/swiper-news';
 import {swiperReviews} from './utils/swiper-reviews';
+import {maps} from './utils/maps';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {CustomSelect} from './modules/select/custom-select';
 import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
@@ -15,10 +18,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  activeMenu();
   swiperHero();
   swiperPrograms();
   swiperNews();
   swiperReviews();
+  maps();
 
   // Modules
   // ---------------------------------
@@ -28,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initAccordions();
+    const select = new CustomSelect();
+    select.init();
     const form = new Form();
     window.form = form;
     form.init();

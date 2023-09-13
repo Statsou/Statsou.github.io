@@ -1,9 +1,21 @@
 .programs {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 60px 100px 119px;
+  max-width: 1440px;
+  padding: 60px 100px 131px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    padding: 50px 0 111px;
+  }
+
+  @include vp-767 {
+    padding: 33px 15px 67px;
+  }
 
   h2 {
     font-family: "Manrope", "Arial", sans-serif;
@@ -15,5 +27,56 @@
     letter-spacing: -2px;
 
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 55px;
+      letter-spacing: -1.5px;
+
+      margin-left: 45px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.7px;
+
+      margin: 0 0 32px;
+    }
+  }
+}
+
+.programs__link {
+  @include vp-1199 {
+    margin-right: 45px;
+  }
+
+  @include vp-767 {
+    padding: 4px 4px 4px 31px;
+    margin: 0;
+
+    gap: 30px;
+    order: 1;
+  }
+}
+
+.programs__navigation {
+  position: absolute;
+  right: 99px;
+  bottom: 121px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 56px;
+
+  @include vp-1199 {
+    right: 44px;
+    bottom: 100px;
+  }
+
+  @include vp-767 {
+    top: 31px;
+    bottom: auto;
+    right: 14px;
   }
 }

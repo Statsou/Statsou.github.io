@@ -1,6 +1,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: max-content;
   padding: 4px 4px 4px 30px;
 
@@ -13,6 +14,11 @@
   transition: all 0.2s;
   cursor: pointer;
 
+  @include vp-767 {
+    padding: 3px 3px 3px 19px;
+    gap: 22px;
+  }
+
   .button__incription {
     font-family: "Manrope", "Arial", sans-serif;
     font-style: normal;
@@ -23,6 +29,11 @@
     letter-spacing: -0.4px;
 
     text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   svg {
@@ -36,6 +47,12 @@
     background-color: $color-cerulean-blue;
 
     transition: all 0.3s;
+
+    @include vp-767 {
+      width: 34px;
+      height: 34px;
+      padding: 0 13px;
+    }
   }
 
   &:not(:disabled) {
@@ -90,6 +107,7 @@
 
     svg {
       background-color: $color-mischka;
+      stroke: $color-white-opacity-70;
       pointer-events: none;
     }
   }
@@ -100,11 +118,62 @@
 
   .button__incription {
     color: $color-default-white;
-    width: 240px;
+    width: 100%;
   }
 
   svg {
     stroke: $color-cerulean-blue;
     background-color: $color-default-white;
+
+    @include vp-767 {
+      width: 35px;
+      height: 35px;
+      padding: 0 10px;
+    }
+  }
+
+  &:not(:disabled) {
+    @include hover-focus {
+      background-color: $color-default-white;
+
+      cursor: pointer;
+
+      .button__incription {
+        color: $color-cerulean-blue;
+      }
+
+      svg {
+        background-color: $color-cerulean-blue;
+        stroke: $color-default-white;
+      }
+    }
+
+    @include active-button {
+      background-color: $color-default-white;
+
+      .button__incription {
+        color: $color-cerulean-blue-opacity;
+      }
+
+      svg {
+        background-color: $color-cerulean-blue;
+        stroke: $color-white-opacity-70;
+      }
+    }
+  }
+}
+
+.button--modal {
+  @include vp-767 {
+    width: 100%;
+
+    .button__incription {
+      width: 100%;
+    }
+
+    svg {
+      width: 37px;
+      padding: 0 11px;
+    }
   }
 }

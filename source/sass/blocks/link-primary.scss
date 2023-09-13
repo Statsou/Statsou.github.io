@@ -21,6 +21,18 @@
   transition: all 0.2s;
   user-select: none;
 
+  @include vp-1199 {
+    padding: 4px 4px 4px 29px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+
+    padding: 4px 4px 4px 19px;
+    gap: 21px;
+  }
+
   &:not(.disabled) {
     @include hover {
       color: $color-default-white;
@@ -77,26 +89,6 @@
       background-color: $color-mischka;
     }
   }
-
-  &--small {
-    &:not(.disabled) {
-      @include hover {
-        background-color: $color-default-white;
-      }
-
-      @include focus {
-        background-color: $color-default-white;
-      }
-
-      @include active {
-        background-color: $color-default-white;
-      }
-    }
-
-    &.disabled {
-      background-color: $color-mischka;
-    }
-  }
 }
 
 .link-primary__link-icon {
@@ -110,6 +102,12 @@
   background-color: $color-cerulean-blue;
 
   transition: all 0.3s;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+    padding: 0 13px;
+  }
 }
 
 .link-primary--small {
@@ -120,5 +118,19 @@
     width: 30px;
     height: 30px;
     padding: 0 10px;
+  }
+
+  &:not(.disabled) {
+    @include hover-focus {
+      background-color: $color-default-white;
+    }
+
+    @include active {
+      background-color: $color-default-white;
+    }
+  }
+
+  &.disabled {
+    background-color: $color-mischka;
   }
 }

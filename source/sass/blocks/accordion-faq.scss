@@ -9,25 +9,51 @@
   border: 1px $color-cerulean-blue solid;
   border-radius: 16px;
 
-  &:not(:last-child) {
-    margin: 0 0 10px;
+  @include vp-1199 {
+    padding: 30px;
   }
 
-  &--custom {
-    padding: 32px 40px;
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
   }
 }
 
 .accordion-faq__element--custom {
+  padding: 32px 40px;
+
+  @include vp-1199 {
+    padding: 25px 30px 23px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+
   .accordion-faq__button {
     position: relative;
     bottom: 5px;
+
+    @include vp-1199 {
+      bottom: 2px;
+    }
   }
 }
 
 .accordion-faq__element.is-active {
   background-color: $color-cerulean-blue;
   padding: 40px 40px 21px;
+
+  @include vp-1199 {
+    padding: 30px 30px 20px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 8px;
+  }
 
   h3 {
     color: $color-default-white;
@@ -74,6 +100,10 @@
 
 .accordion-faq__element--custom.is-active {
   padding: 32px 40px 21px;
+
+  @include vp-1199 {
+    padding: 25px 30px 23px;
+  }
 }
 
 .accordion-faq__title {
@@ -92,6 +122,20 @@
 
     width: 65%;
     margin: 0;
+
+    @include vp-1199 {
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: -0.7px;
+
+      width: 80%;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -0.6px;
+    }
   }
 }
 
@@ -163,37 +207,9 @@
       background-color: $color-default-white;
     }
   }
-
-  // &:not(:disabled) {
-  //   @include hover-focus {
-  //     background-color: $color-default-white;
-  //     outline: none;
-
-  //     transition: all 0.2s;
-
-  //     cursor: pointer;
-  //   }
-
-  //   @include active-button {
-  //     background-color: $color-default-white;
-
-  //     svg {
-  //       opacity: 0.7;
-  //       transition: all 0.2s;
-  //     }
-  //   }
-  // }
-
-  // &:disabled {
-  //   cursor: initial;
-
-  //   svg {
-  //     stroke: $color-mischka;
-  //   }
-  // }
 }
 
-.accordion-faq__wrapper {
+.accordion-faq__content {
   p {
     font-family: "Manrope", "Arial", sans-serif;
     font-style: normal;
@@ -206,5 +222,19 @@
     width: 70%;
     margin: 0;
     padding: 12px 0;
+
+    @include vp-1199 {
+      line-height: 20px;
+      width: 90%;
+      padding: 16px 0 5px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+
+      width: auto;
+      padding: 15px 0 5px;
+    }
   }
 }

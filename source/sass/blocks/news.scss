@@ -1,6 +1,17 @@
 .news {
   position: relative;
+
+  max-width: 1440px;
   padding: 125px 100px 60px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    padding: 100px 45px 50px;
+  }
+
+  @include vp-767 {
+    padding: 68px 0 37px;
+  }
 
   h2 {
     font-family: "Manrope", "Arial", sans-serif;
@@ -13,6 +24,19 @@
 
     text-align: center;
     margin: 0 0 45px;
+
+    @include vp-1199 {
+      font-size: 34px;
+      letter-spacing: -1px;
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.5px;
+      margin: 0 0 28px;
+    }
   }
 }
 
@@ -25,6 +49,25 @@
   gap: 29px;
   flex-wrap: wrap;
   list-style-type: none;
+
+  @include vp-1199 {
+    margin: 0 0 29px;
+    gap: 9px;
+  }
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding: 0 15px;
+    margin: 0 0 23px;
+
+    gap: 11px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 
@@ -44,6 +87,16 @@
   border-radius: 20px;
   opacity: 0.6;
   transition: all 0.2s;
+
+  @include vp-1199 {
+    padding: 12px 19px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 8px 13px;
+  }
 
   &.is-active {
     border: 1px $color-cerulean-blue solid;
@@ -70,7 +123,6 @@
     border: none;
     opacity: 0.5;
   }
-
 }
 
 .news__navigation {

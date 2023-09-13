@@ -8,6 +8,9 @@
 // Tabs
 @import "vendor/data-accordion";
 
+// Leaflet
+@import "vendor/leaflet";
+
 // Global
 // ---------------------------------
 
@@ -21,17 +24,14 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
 @import "blocks/modal";
-@import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-
 @import "blocks/link-primary";
 @import "blocks/button";
 @import "blocks/main-header";
+@import "blocks/hero";
 @import "blocks/slider-hero";
-
 @import "blocks/about";
 @import "blocks/advantages";
 @import "blocks/programs";

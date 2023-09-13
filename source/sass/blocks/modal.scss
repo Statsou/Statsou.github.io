@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $dark-overlay;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -27,62 +27,6 @@
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-  }
-
-  &__content {
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-
-    width: 40px;
-    height: 40px;
-    padding: 0;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
   }
 
   &--responsive {
@@ -114,14 +58,46 @@
   }
 }
 
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
+
+  @include vp-767 {
+    padding: 60px 16px;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
 .modal__content {
   position: relative;
 
-  padding: 60px 80px;
+  padding: 55px 80px 59px;
   width: 510px;
 
   background-color: $color-default-white;
   border-radius: 16px;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 38px 15px 40px 14px;
+  }
 
   h2 {
     font-family: "Manrope", "Arial", sans-serif;
@@ -130,9 +106,24 @@
     font-size: 32px;
     line-height: 36px;
     color: $color-cerulean-blue;
+    letter-spacing: -1px;
 
     text-align: center;
-    margin: 0 0 30px;
+    margin: 0 0 7px;
+
+    @include vp-1199 {
+      font-size: 28px;
+      line-height: 28px;
+      margin: 0 0 13px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+
+      margin: 0 0 6px;
+    }
   }
 
   p {
@@ -142,21 +133,41 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-charcoal;
+    letter-spacing: -0.5px;
 
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
+
+    @include vp-1199 {
+      line-height: 20px;
+      margin: 0 0 23px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+
+      padding: 0 25px;
+      margin: 0 0 21px;
+    }
   }
 }
 
 .modal__form {
   fieldset {
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 27px;
+    min-inline-size: auto;
+
     border: none;
+
+    @include vp-767 {
+      margin: 0 0 19px;
+    }
   }
 
-  input[type=text],
-  input[type=tel] {
+  input[type="text"],
+  input[type="tel"] {
     font-family: "Manrope", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -170,44 +181,107 @@
     background-color: $color-transparent;
     border: 1px $color-charcoal-opacity solid;
     border-radius: 8px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+
+      width: 100%;
+      padding: 11px 14px;
+    }
+
+    &:not(:disabled) {
+      @include hover {
+        border: 1px $color-charcoal solid;
+        transition: all 0.2s;
+
+        + .modal__label {
+          opacity: 1;
+          transition: all 0.2s;
+        }
+      }
+
+      @include focus {
+        border: 1px $color-charcoal solid;
+        outline: none;
+
+        + .modal__label {
+          opacity: 1;
+        }
+      }
+
+      @include active {
+        border: 1px $color-charcoal solid;
+        outline: none;
+
+        + .modal__label {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:disabled {
+      background-color: rgba($color-mischka, 0.2);
+      border: 1px rgba($color-mischka, 0.5) solid;
+
+      + .modal__label {
+        color: $color-mischka;
+        opacity: 0.6;
+      }
+    }
   }
 
-  .custom-toggle__label {
-    font-family: "Manrope", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
-    color: $color-charcoal;
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    border: 1px $color-wild-watermelon solid;
+    background-color: rgba($color-wild-watermelon, 0.2);
   }
 }
 
-.modal__description-input {
+.modal__label {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
+  letter-spacing: -0.5px;
 
   display: block;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 
   opacity: 0.8;
+  order: -1;
+
+  @include vp-767 {
+    margin: 0 0 6px;
+  }
 }
 
 .modal__input {
-  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 0 16px;
+
+  @include vp-767 {
+    margin: 0 0 14px;
+  }
 }
 
 .modal__submit {
   margin: 0 auto;
+
+  @include vp-767 {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .modal__close-button {
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: 25px;
 
   display: flex;
   justify-content: center;
@@ -216,7 +290,45 @@
   border: none;
   background-color: $color-transparent;
 
+  @include vp-767 {
+    top: 20px;
+    right: 13px;
+  }
+
   svg {
-    stroke: $color-cerulean-blue
+    stroke: $color-cerulean-blue;
+
+    @include vp-767 {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &:not(:disabled) {
+    @include hover-focus {
+      cursor: pointer;
+
+      svg {
+        stroke: $color-charcoal;
+      }
+    }
+
+    @include active {
+      opacity: 0.6;
+
+      svg {
+        stroke: $color-charcoal;
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: initial;
+    pointer-events: none;
+
+    svg {
+      stroke: $color-mischka;
+    }
   }
 }

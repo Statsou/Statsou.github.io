@@ -1,43 +1,20 @@
 .custom-select {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0 0 15px;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
+  @include vp-1199 {
+    margin: 0 0 13px;
   }
 
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
+  @include vp-767 {
+    margin: 0 0 20px;
 
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity  0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
-  }
-
-  &__placeholder {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
+    &--dark {
+      margin: 0 0 14px;
     }
   }
 
@@ -58,135 +35,6 @@
     clip-path: inset(100%);
   }
 
-  &__button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 51px;
-    padding: 5px 20px 5px 10px;
-
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px $color-white-opacity solid;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-
-    transition: border 0.3s ease;
-
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
-    }
-  }
-
-  &__list {
-    position: absolute;
-    bottom: 10px;
-    z-index: 1;
-
-    width: 100%;
-    max-height: 100px;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-
-    list-style: none;
-
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    transform: translateY(100%);
-    visibility: hidden;
-    opacity: 0;
-
-    transition: visibility 0.3s ease, opacity 0.3s ease;
-  }
-
-  &__item {
-    padding: 5px;
-
-    outline: none;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease;
-
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-  }
-
-  &__error {
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.1s ease;
-  }
-
-  &__text {
-    font-size: 20px;
-    line-height: 24px;
-    flex-shrink: 0;
-    width: 80%;
-    overflow: hidden;
-
-    text-align: left;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease 0.1s;
-
-    br {
-      display: none;
-    }
-  }
-
-  &__icon {
-    flex-shrink: 0;
-    width: 15px;
-    height: 7px;
-    margin-left: auto;
-
-    background-color: $color-default-white;
-
-    transition: transform 0.3s ease;
-
-    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
-  }
-
   &.is-disabled {
     pointer-events: none;
 
@@ -204,9 +52,21 @@
   }
 
   &.is-open {
+    .custom-select__button {
+      border: 1px $color-default-white solid;
+
+      &--dark {
+        border: 1px $color-charcoal solid;
+      }
+    }
+
+    .custom-select__description {
+      opacity: 1;
+    }
+
     .custom-select__list {
       visibility: visible;
-      opacity: 1;
+      max-height: 144px;
     }
 
     .custom-select__icon {
@@ -238,38 +98,12 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      border: 1px $color-wild-watermelon solid;
 
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+
+      @include hover-focus {
+        border: 1px $color-default-white solid;
       }
-    }
-  }
-
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
-
-  &--placeholder {
-    .custom-select__label {
-      transform: translateY(calc(-50% - 40px));
-      opacity: 1;
-    }
-
-    &.is-open .custom-select__label {
-      opacity: 1;
-    }
-
-    &.not-empty .custom-select__label {
-      opacity: 1;
     }
   }
 
@@ -284,18 +118,231 @@
       opacity: 1;
     }
   }
+}
 
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
+.custom-select__description {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-alabaster;
+  letter-spacing: -0.5px;
 
-    &.is-invalid {
-      color: #ff0000;
+  display: block;
+  margin: 0 0 9px;
+
+  opacity: 0.8;
+  order: -1;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 12px;
+  }
+
+  &--dark {
+    color: $color-charcoal;
+
+    @include vp-767 {
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+  }
+}
+
+.custom-select__label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+
+  transition: transform 0.3s ease, opacity  0.3s ease;
+
+  pointer-events: none;
+}
+
+.custom-select__placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  pointer-events: none;
+}
+
+.custom-select__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 51px;
+  padding: 5px 20px 5px 10px;
+
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px $color-white-opacity solid;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  transition: border 0.2s ease;
+
+  @include vp-767 {
+    height: 49px;
+  }
+
+  @include hover {
+    border: 1px $color-default-white solid;
+
+    ~ .custom-select__description {
+      opacity: 1;
+      transition: all 0.2s;
+    }
+  }
+
+  @include focus {
+    border: 1px $color-default-white solid;
+
+    .custom-select__icon {
+      transform: rotate(180deg);
     }
 
-    &.is-valid {
-      color: #15ab07;
+    ~ .custom-select__description {
+      opacity: 1;
+      transition: all 0.2s;
     }
+  }
+
+  @include active {
+    border: 1px $color-default-white solid;
+
+    .custom-select__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--dark {
+    border: 1px $color-charcoal-opacity solid;
+
+    @include vp-767 {
+      height: 44px;
+    }
+
+    @include hover {
+      border: 1px $color-charcoal solid;
+    }
+
+    @include focus {
+      border: 1px $color-charcoal solid;
+    }
+
+    @include active {
+      border: 1px $color-charcoal solid;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+.custom-select__list {
+  position: absolute;
+  bottom: -4px;
+  z-index: 2;
+
+  width: 100%;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+
+  list-style: none;
+
+  background-color: $color-default-white;
+  border: 1px $color-default-white solid;
+  border-radius: 8px;
+  transform: translateY(100%);
+  visibility: hidden;
+
+  transition: visibility 0.3s ease, max-height 0.3s ease;
+
+  &--dark {
+    border: 1px $color-charcoal solid;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.custom-select__item {
+  letter-spacing: -0.5px;
+
+  padding: 12px 20px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  &[aria-selected="true"] {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+}
+
+.custom-select__text {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alabaster;
+
+  flex-shrink: 0;
+  width: 80%;
+  overflow: hidden;
+
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease 0.1s;
+
+  br {
+    display: none;
+  }
+
+  &--dark {
+    color: $color-charcoal;
+  }
+}
+
+.custom-select__icon {
+  flex-shrink: 0;
+  width: 15px;
+  height: 7px;
+  margin-left: auto;
+
+  background-color: $color-default-white;
+
+  transition: transform 0.3s ease;
+
+  clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+
+  &--dark {
+    background-color: $color-charcoal;
   }
 }

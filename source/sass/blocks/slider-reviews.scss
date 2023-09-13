@@ -1,11 +1,47 @@
 .slider-reviews {
+  position: relative;
   overflow: hidden;
+
+  @include vp-1199 {
+    padding: 0 0 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+
+  .slider-reviews__bullet {
+    top: auto;
+    left: auto;
+    bottom: 0;
+
+    width: calc(91% + 5px);
+    height: 3px;
+
+    background-color: rgba($color-cerulean-blue, 0.2);
+
+    @include vp-1199 {
+      width: 73%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .slider-reviews__list {
   padding: 0;
-  margin: 0 0 41px;
+  margin: 0 0 52px;
   list-style-type: none;
+
+  @include vp-1199 {
+    margin: 0 0 51px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .slider-reviews__item {
@@ -13,6 +49,15 @@
   padding: 50px 50px 42px;
   border: 1px $color-cerulean-blue solid;
   border-radius: 16px;
+
+  @include vp-1199 {
+    width: 560px;
+    padding: 50px 50px 45px 49px;
+  }
+
+  @include vp-767 {
+    padding: 30px 15px 24px;
+  }
 }
 
 .slider-reviews__content-slide {
@@ -22,6 +67,10 @@
 
   flex-wrap: wrap;
   gap: 25px;
+
+  @include vp-767 {
+    gap: 13px;
+  }
 
   h3 {
     font-family: "Manrope", "Arial", sans-serif;
@@ -34,6 +83,23 @@
 
     width: min-content;
     margin: 0;
+
+    @include vp-1199 {
+      letter-spacing: 0.5px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+.slider-reviews__avatar {
+  @include vp-767 {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -42,16 +108,28 @@
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
+
+  @include vp-767 {
+    gap: 9px;
+  }
 }
 
 .slider-reviews__under-list {
   display: flex;
   margin: 0;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .slider-reviews__under-item {
   &:not(:last-child) {
     margin-right: 29px;
+
+    @include vp-767 {
+      margin-right: 27px;
+    }
   }
 }
 
@@ -62,7 +140,7 @@
   font-size: 12px;
   line-height: 12px;
   color: $color-cerulean-blue;
-  letter-spacing: -0.5px; // Спросить
+  letter-spacing: -0.5px;
 
   text-transform: uppercase;
 
@@ -76,9 +154,15 @@
   font-size: 14px;
   line-height: 18px;
   color: $color-charcoal;
-  letter-spacing: -0.5px; // Спросить
+  letter-spacing: -0.5px;
 
   margin: 0;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.4px;
+  }
 }
 
 
@@ -93,6 +177,23 @@
     letter-spacing: -0.8px;
 
     margin: 0 0 14px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -0.65px;
+
+      padding: 0 10px 0 0;
+      margin: 0 0 17px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -0.55px;
+
+      margin: 12px 0 15px;
+    }
   }
 
   p {
@@ -105,5 +206,21 @@
     letter-spacing: -0.6px;
 
     margin: 0;
+
+    @include vp-1199 {
+      line-height: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.slider-reviews__bullet {
+  .swiper-pagination-progressbar-fill {
+    background-color: $color-cerulean-blue;
+    opacity: 1;
   }
 }
