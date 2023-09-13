@@ -53,11 +53,13 @@
 
   // Временно
   min-height: 400px;
-  width: 286px;
+  max-width: 286px;
+  width: 23%;
   //____________
 
   @include vp-1199 {
     min-height: auto;
+    max-width: none;
     height: 350px;
   }
 
@@ -201,7 +203,12 @@
 
   // Временно
   &:first-child {
-    width: 604px;
+    width: 48%;
+    max-width: 604px;
+
+    @include vp-1199 {
+      max-width: none;
+    }
 
     h3 {
       width: 290px;
