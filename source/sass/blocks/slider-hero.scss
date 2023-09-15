@@ -1,5 +1,11 @@
 .slider-hero {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 100%;
+
   overflow: hidden;
 
   .slider-hero__bullet {
@@ -41,29 +47,16 @@
 }
 
 .slider-hero--content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  min-height: 800px;
+  position: relative;
   max-width: 1440px;
   width: 100%;
-  padding: 120px 0 60px 100px;
   margin: 0 auto;
 
-  @include vp-1199 {
-    padding: 100px 0 60px 45px;
-    min-height: 1024px;
-  }
+  z-index: 2;
 
-  @include vp-767 {
-    min-height: 568px;
-    padding: 80px 15px 20px;
+  @include vp-1199 {
+    padding: 0;
+    min-height: auto;
   }
 }
 
