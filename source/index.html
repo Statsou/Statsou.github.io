@@ -22,9 +22,11 @@
       <header class="main-header">
         <div class="main-header__overlay"></div>
         <div class="main-header__container">
-          <a class="main-header__logo-link" href="index.html">
-            <img class="main-header__logo" src="./img/logotype.svg" width="52" height="52" alt="Логотип проекта Маса.">
-          </a>
+          <div class="main-header__logo-wrapper">
+            <a class="main-header__logo-link" href="index.html">
+              <img class="main-header__logo" src="./img/logotype.svg" width="52" height="52" alt="Логотип проекта Маса.">
+            </a>
+          </div>
 
           <nav class="main-header__navigation">
             <button class="main-header__navigation-button" type="button">
@@ -37,7 +39,6 @@
                 <use xlink:href="img/sprite.svg#close"></use>
               </svg>
             </button>
-
 
             <ul class="main-header__menu-list">
               <li class="main-header__menu-item">
@@ -382,25 +383,25 @@
           <h2>Новости и материалы</h2>
           <ul class="news__filter-list">
             <li class="news__filter-item">
-              <button class="news__filter-button is-active" type="button">Общее</button>
+              <button class="news__filter-button is-active" type="button" data-filter="all">Общее</button>
             </li>
             <li class="news__filter-item">
-              <button class="news__filter-button" type="button">Волонтёрство</button>
+              <button class="news__filter-button" type="button" data-filter="volunteering">Волонтёрство</button>
             </li>
             <li class="news__filter-item">
-              <button class="news__filter-button" type="button">Стажировки</button>
+              <button class="news__filter-button" type="button" data-filter="internship">Стажировки</button>
             </li>
             <li class="news__filter-item">
-              <button class="news__filter-button" type="button">Карьера</button>
+              <button class="news__filter-button" type="button" data-filter="career">Карьера</button>
             </li>
             <li class="news__filter-item">
-              <button class="news__filter-button" type="button">Путешествия</button>
+              <button class="news__filter-button" type="button" data-filter="trips">Путешествия</button>
             </li>
           </ul>
 
           <div class="slider-news swiper-news">
             <ul class="slider-news__list swiper-wrapper">
-              <li class="slider-news__item slider-news__item--1 swiper-slide">
+              <li class="slider-news__item slider-news__item--1 swiper-slide" data-filter="internship">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">23/03/2023</span>
                   <h3>Интервью с&nbsp;участницей программы стажировки</h3>
@@ -415,7 +416,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--2 swiper-slide">
+              <li class="slider-news__item slider-news__item--2 swiper-slide" data-filter="trips">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">20/03/2023</span>
                   <h3>Путешествуем по&nbsp;Израилю</h3>
@@ -430,7 +431,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--3 swiper-slide">
+              <li class="slider-news__item slider-news__item--3 swiper-slide" data-filter="career">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">10/03/2023</span>
                   <h3>Построй свою карьеру</h3>
@@ -447,7 +448,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--4 swiper-slide">
+              <li class="slider-news__item slider-news__item--4 swiper-slide" data-filter="volunteering">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">17/03/2023</span>
                   <h3>Новая программа волонтёрства</h3>
@@ -463,7 +464,7 @@
               </li>
 
 
-              <li class="slider-news__item slider-news__item--1 slider-news__item--dublicate swiper-slide">
+              <li class="slider-news__item slider-news__item--1 swiper-slide" data-filter="internship">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">23/03/2023</span>
                   <h3>Интервью с&nbsp;участницей программы стажировки</h3>
@@ -478,7 +479,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--2 slider-news__item--dublicate swiper-slide">
+              <li class="slider-news__item slider-news__item--2 swiper-slide" data-filter="trips">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">20/03/2023</span>
                   <h3>Путешествуем по&nbsp;Израилю</h3>
@@ -493,7 +494,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--3 swiper-slide">
+              <li class="slider-news__item slider-news__item--3 swiper-slide" data-filter="career">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">10/03/2023</span>
                   <h3>Построй свою карьеру</h3>
@@ -510,22 +511,7 @@
                 </div>
               </li>
 
-              <li class="slider-news__item slider-news__item--4 swiper-slide">
-                <div class="slider-news__content-slide">
-                  <span class="slider-news__date">17/03/2023</span>
-                  <h3>Новая программа волонтёрства</h3>
-                  <div class="slider-news__under-wrapper">
-                    <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
-                    <a class="slider-news__link link-primary link-primary--small" href="#">
-                      <svg class="link-primary__link-icon" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#arrow-link"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li class="slider-news__item slider-news__item--4 swiper-slide">
+              <li class="slider-news__item slider-news__item--4 swiper-slide" data-filter="volunteering">
                 <div class="slider-news__content-slide">
                   <span class="slider-news__date">17/03/2023</span>
                   <h3>Новая программа волонтёрства</h3>
@@ -998,16 +984,16 @@
               <fieldset>
 
                 <div class="modal__input" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <input type="text" name="name" id="name">
+                  <input type="text" name="name" id="modal-name">
                   <label class="modal__label" for="name">Имя</label>
                 </div>
 
                 <div class="modal__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <input type="tel" name="phone" id="phone">
+                  <input type="tel" name="phone" id="modal-phone">
                   <label class="modal__label" for="phone">Телефон</label>
                 </div>
 
-                <div class="modal__select custom-select custom-select--dark" data-validate-type="text" data-select="data-select" data-validate-type="select" data-name="city" data-required="data-required">
+                <div class="modal__select custom-select custom-select--dark" data-select="data-select" data-validate-type="select" data-name="city" data-required="data-required">
                   <button class="custom-select__button custom-select__button--dark" type="button" aria-label="Ваш город проживания">
                     <span class="custom-select__text custom-select__text--dark"></span>
                     <span class="custom-select__icon custom-select__icon--dark"></span>
@@ -1053,5 +1039,6 @@
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/swiper-new.js"></script>
   </body>
 </html>

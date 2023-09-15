@@ -5,7 +5,7 @@
   font-weight: 300;
 
   display: flex;
-  width: 500px;
+  max-width: 500px;
   padding: 0;
 
   @include vp-767 {
@@ -58,7 +58,7 @@
       border: 1px $color-default-white solid;
       opacity: 1;
 
-      svg {
+      > svg {
         stroke: $color-cerulean-blue;
         transition: all 0.2s;
       }
@@ -71,7 +71,7 @@
     + .custom-toggle__icon--dark {
       border: 1px $color-cerulean-blue solid;
 
-      svg {
+      > svg {
         stroke: $color-default-white;
       }
 
@@ -83,7 +83,7 @@
     &:not(:disabled) {
       + .custom-toggle__icon {
         @include hover {
-          svg {
+          > svg {
             stroke: $color-default-white;
           }
 
@@ -95,7 +95,7 @@
 
       + .custom-toggle__icon--dark {
         @include hover {
-          svg {
+          > svg {
             stroke: $color-cerulean-blue;
           }
         }
@@ -104,7 +104,7 @@
 
     @include focus {
       + .custom-toggle__icon {
-        svg {
+        > svg {
           stroke: $color-default-white;
         }
 
@@ -116,7 +116,7 @@
       + .custom-toggle__icon--dark {
         border: 1px $color-charcoal solid;
 
-        svg {
+        > svg {
           stroke: $color-cerulean-blue;
         }
       }
@@ -130,7 +130,7 @@
           background-color: $color-mischka;
         }
 
-        svg {
+        > svg {
           stroke: $color-default-white;
         }
       }
@@ -138,11 +138,11 @@
   }
 
   &.is-invalid {
-    label span {
+    > label > span {
       color: $color-wild-watermelon;
     }
 
-    label .custom-toggle__icon {
+    > label > .custom-toggle__icon {
       border: 1px $color-wild-watermelon solid;
       background-color: $color-wild-watermelon-20;
     }

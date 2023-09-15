@@ -30,13 +30,13 @@
   }
 
   &--responsive {
-    .modal__content {
+    > .modal__content {
       width: 100%;
     }
   }
 
   &--fit-content {
-    .modal__content {
+    > .modal__content {
       width: auto;
 
       @include vp-767 {

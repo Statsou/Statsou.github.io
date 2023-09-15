@@ -14,8 +14,8 @@
   }
 
   @include vp-767 {
-    padding: 15px 15px 40px;
-    gap: 16px;
+    padding: 13px 15px 40px;
+    gap: 15px;
   }
 }
 
@@ -32,13 +32,14 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 12px;
+    gap: 13px;
   }
 }
 
 .main-footer__nav-list {
   display: flex;
 
+  max-width: 1100px;
   padding: 0;
   margin: 0;
 
@@ -46,8 +47,14 @@
   flex-wrap: wrap;
   list-style-type: none;
 
+  @include vp-1199 {
+    max-width: 548px;
+  }
+
   @include vp-767 {
     justify-content: center;
+    max-width: none;
+
     column-gap: 31px;
     row-gap: 5px;
   }
@@ -77,6 +84,7 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 20px;
+    letter-spacing: -0.5px;
   }
 
   &:not(.disabled) {
@@ -111,6 +119,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+  flex-wrap: wrap;
 
   @include vp-1199 {
     order: 1;
@@ -177,13 +186,18 @@
   justify-content: space-between;
   width: 100%;
 
+  flex-wrap: wrap;
+
   @include vp-1199 {
     flex-direction: column;
     width: max-content;
+    max-width: 500px;
     align-items: start;
   }
 
   @include vp-767 {
+    text-align: center;
+    max-width: 85vw;
     margin: 0 auto;
   }
 }
@@ -209,6 +223,10 @@
     opacity: 0.6;
     order: 1;
   }
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
 }
 
 .main-footer__copyright-link {
@@ -220,11 +238,8 @@
   }
 
   @include vp-767 {
-    position: relative;
-    left: 5px;
-
     padding: 0 0 1px;
-    margin: 0 0 12px;
+    margin: 1px auto 12px;
   }
 
   &:not(.disabled) {

@@ -39,16 +39,20 @@
   align-items: center;
   width: calc(33vw + 2px);
   max-width: 480px;
-  padding: 30px 49px 30px 59px;
+  padding: 30px 61px 30px 59px;
 
   border: 1px $color-default-white solid;
   border-radius: 16px;
+  flex-wrap: wrap;
+  gap: 4px;
 
   @include vp-1199 {
     flex-direction: column;
-    justify-content: space-between;
+    align-items: start;
     width: auto;
     padding: 30px 30px 25px;
+
+    gap: 0;
   }
 
   @include vp-767 {
@@ -67,7 +71,7 @@
     text-transform: uppercase;
     letter-spacing: -0.5px;
 
-    width: inherit;
+    max-width: 175px;
     margin: 0;
 
     @include vp-1199 {
@@ -75,6 +79,7 @@
       line-height: 22px;
       letter-spacing: -0.6px;
 
+      max-width: none;
       padding: 0 40px 0 0;
       margin: 0 0 7px;
     }
@@ -99,9 +104,11 @@
     text-transform: lowercase;
     letter-spacing: -0.6px;
 
+    max-width: 176px;
     margin: 0;
 
     @include vp-1199 {
+      max-width: none;
       padding: 0 12px 0 0;
     }
 
@@ -136,10 +143,12 @@
 }
 
 .advantages__item--2 {
-  padding: 30px 33px 30px 59px;
+  padding: 30px 49px 30px 59px;
+  gap: 16px;
 
   @include vp-1199 {
     padding: 30px 30px 25px;
+    gap: 0;
   }
 
   @include vp-767 {
@@ -148,10 +157,12 @@
 }
 
 .advantages__item--3 {
-  padding: 30px 43px 30px 59px;
+  padding: 30px 46px 30px 59px;
+  gap: 25px;
 
   @include vp-1199 {
     padding: 30px 30px 25px;
+    gap: 0;
   }
 
   @include vp-767 {
@@ -159,17 +170,37 @@
   }
 
   h3 {
-    width: 166px;
-    margin: 0 16px 0 0;
+    max-width: 154px;
     flex-shrink: 0;
 
     @include vp-767 {
+      max-width: none;
       margin: 0 0 3px;
+    }
+  }
+
+  p {
+    max-width: 191px;
+
+    @include vp-1199 {
+      max-width: none;
     }
   }
 }
 
 .advantages__item--4 {
+  padding: 30px 45px 30px 59px;
+  gap: 20px;
+
+  @include vp-1199 {
+    padding: 30px 29px 25px;
+    gap: 0;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 23px 20px;
+  }
+
   p {
     @include vp-1199 {
       padding: 0 30px 0 0;

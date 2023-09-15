@@ -16,18 +16,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-new-tan;
-  background-image: url("../img/feedback/feedback-background-desktop.png");
+  background-image: url("../img/feedback/feedback-background-desktop.webp");
   border-radius: 16px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/feedback/feedback-background-desktop@2x.png");
+    background-image: url("../img/feedback/feedback-background-desktop@2x.webp");
   }
 
   @include vp-1199 {
-    background-image: url("../img/feedback/feedback-background-tablet.png");
+    background-image: url("../img/feedback/feedback-background-tablet.webp");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/feedback/feedback-background-tablet@2x.png");
+      background-image: url("../img/feedback/feedback-background-tablet@2x.webp");
     }
   }
 

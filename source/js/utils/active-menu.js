@@ -15,59 +15,72 @@ export const activeMenu = function () {
 
   const menuElements = [];
 
-  menuElements.push(headerOverlay, navigation, menuButton, iconBurger, iconClose, menuList);
+  if (document.querySelector('.main-header__overlay') &&
+    document.querySelector('.main-header__navigation') &&
+    navigation.querySelector('.main-header__navigation-button') &&
+    menuButton.querySelector('.main-header__burger-icon') &&
+    menuButton.querySelector('.main-header__close-icon') &&
+    navigation.querySelector('.main-header__menu-list') &&
+    menuList.querySelectorAll('.main-header__sub-menu-list')) {
 
-  menuList.classList.add('is-active');
-  navigation.classList.add('is-active');
-  menuButton.classList.add('is-active');
-  header.classList.add('is-active');
+    menuElements.push(headerOverlay, navigation, menuButton, iconBurger, iconClose, menuList);
 
-  subMenuLists.forEach((menu) => {
-    menu.classList.add('is-active');
-  });
-
-  function openMenu () {
-    menuElements.forEach((element) => {
-      element.classList.toggle('is-open');
-    })
+    menuList.classList.add('is-active');
+    navigation.classList.add('is-active');
+    menuButton.classList.add('is-active');
+    header.classList.add('is-active');
 
     subMenuLists.forEach((menu) => {
-      if (menu.classList.contains('is-open')) {
-        menu.classList.remove('is-open');
-      }
+      menu.classList.add('is-active');
     });
+  }
 
-    subMenuTitles.forEach((title) => {
-      if (title.classList.contains('is-open')) {
-        title.classList.remove('is-open');
+  function openMenu () {
+    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuTitles !== 0) {
+      menuElements.forEach((element) => {
+        element.classList.toggle('is-open');
+      })
+
+      subMenuLists.forEach((menu) => {
+        if (menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+        }
+      });
+
+      subMenuTitles.forEach((title) => {
+        if (title.classList.contains('is-open')) {
+          title.classList.remove('is-open');
+        }
+      });
+
+      if (menuList.classList.contains('is-open')) {
+        window.onscroll = () => window.scroll(0, 0);
+      } else {
+        window.onscroll = () => window.scroll();
       }
-    });
-
-    if (menuList.classList.contains('is-open')) {
-      window.onscroll = () => window.scroll(0, 0);
-    } else {
-      window.onscroll = () => window.scroll();
     }
   }
 
   function closeMenu () {
-    menuElements.forEach((element) => {
-      element.classList.remove('is-open');
-    })
+    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuTitles !== 0) {
+      menuElements.forEach((element) => {
+        element.classList.remove('is-open');
+      })
 
-    subMenuLists.forEach((menu) => {
-      if (menu.classList.contains('is-open')) {
-        menu.classList.remove('is-open');
-      }
-    });
+      subMenuLists.forEach((menu) => {
+        if (menu.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+        }
+      });
 
-    subMenuTitles.forEach((title) => {
-      if (title.classList.contains('is-open')) {
-        title.classList.remove('is-open');
-      }
-    });
+      subMenuTitles.forEach((title) => {
+        if (title.classList.contains('is-open')) {
+          title.classList.remove('is-open');
+        }
+      });
 
-    window.onscroll = () => window.scroll();
+      window.onscroll = () => window.scroll();
+    }
   }
 
   menuButton.addEventListener('click', () => {
@@ -90,11 +103,13 @@ export const activeMenu = function () {
     });
   });
 
-  subMenuTitles.forEach((title) => {
-    const siblingList = title.nextElementSibling;
-    title.addEventListener('click', () => {
-      siblingList.classList.toggle('is-open');
-      title.classList.toggle('is-open');
+  if (subMenuTitles !== 0) {
+    subMenuTitles.forEach((title) => {
+      const siblingList = title.nextElementSibling;
+      title.addEventListener('click', () => {
+        siblingList.classList.toggle('is-open');
+        title.classList.toggle('is-open');
+      });
     });
-  });
+  }
 }

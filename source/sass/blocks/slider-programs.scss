@@ -52,6 +52,7 @@
   display: flex;
   align-items: flex-end;
   min-height: 420px;
+  height: auto;
   padding: 20px 20px 21px;
 
   background-color: $color-mischka;
@@ -70,49 +71,49 @@
   }
 
   &--1 {
-    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-1.png");
+    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-1.webp");
 
     @media (min-resolution: 2dppx) {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-1@2x.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-1@2x.webp");
     }
 
     @include vp-1199 {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-1.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-1.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-1@2x.png");
+        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-1@2x.webp");
       }
     }
   }
 
   &--2 {
-    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-2.png");
+    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-2.webp");
 
     @media (min-resolution: 2dppx) {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-2@2x.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-2@2x.webp");
     }
 
     @include vp-1199 {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-2.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-2.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-2@2x.png");
+        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-2@2x.webp");
       }
     }
   }
 
   &--3 {
-    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-3.png");
+    background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-3.webp");
 
     @media (min-resolution: 2dppx) {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-3@2x.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-desktop-3@2x.webp");
     }
 
     @include vp-1199 {
-      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-3.png");
+      background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-3.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-3@2x.png");
+        background-image: $color-overlay-slider, url("../img/programs/background-slider-tablet-3@2x.webp");
       }
     }
   }
