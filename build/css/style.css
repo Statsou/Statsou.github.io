@@ -3912,6 +3912,11 @@ button,
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 1199px) {
+  .slider-hero__image {
+    min-height: 100%;
+  }
+}
 
 .slider-hero__item {
   position: relative;

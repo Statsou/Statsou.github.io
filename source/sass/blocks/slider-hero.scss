@@ -104,6 +104,10 @@
   width: 100vw;
   height: 85vh;
   object-fit: cover;
+
+  @include vp-1199 {
+    min-height: 100%;
+  }
 }
 
 .slider-hero__item {
