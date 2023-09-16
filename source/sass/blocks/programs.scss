@@ -26,6 +26,7 @@
     color: $color-cerulean-blue;
     letter-spacing: -2px;
 
+    max-width: 900px;
     margin: 0;
 
     @include vp-1199 {
@@ -33,6 +34,7 @@
       line-height: 55px;
       letter-spacing: -1.5px;
 
+      max-width: 400px;
       margin-left: 45px;
     }
 
@@ -41,12 +43,15 @@
       line-height: 20px;
       letter-spacing: -0.7px;
 
+      max-width: 230px;
       margin: 0 0 32px;
     }
   }
 }
 
 .programs__link {
+  align-self: flex-start;
+
   @include vp-1199 {
     margin-right: 45px;
   }

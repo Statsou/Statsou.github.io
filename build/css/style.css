@@ -660,6 +660,7 @@ template {
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: block;
   bottom: 10px;
   left: 0;
   width: 100%;
@@ -3343,55 +3344,55 @@ button,
   pointer-events: none;
 }
 
-.button--secundary {
+.button--secondary {
   border: 1px #ffffff solid;
 }
-.button--secundary .button__incription {
+.button--secondary .button__incription {
   color: #ffffff;
   width: 100%;
 }
-.button--secundary svg {
+.button--secondary svg {
   stroke: #316dc2;
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
-  .button--secundary svg {
+  .button--secondary svg {
     width: 35px;
     height: 35px;
     padding: 0 10px;
   }
 }
 @media (hover: hover) {
-  .button--secundary:not(:disabled):hover:not(.focus-visible) {
+  .button--secondary:not(:disabled):hover:not(.focus-visible) {
     background-color: #ffffff;
     cursor: pointer;
   }
-  .button--secundary:not(:disabled):hover:not(.focus-visible) .button__incription {
+  .button--secondary:not(:disabled):hover:not(.focus-visible) .button__incription {
     color: #316dc2;
   }
-  .button--secundary:not(:disabled):hover:not(.focus-visible) svg {
+  .button--secondary:not(:disabled):hover:not(.focus-visible) svg {
     background-color: #316dc2;
     stroke: #ffffff;
   }
 }
-.button--secundary:not(:disabled).focus-visible:focus {
+.button--secondary:not(:disabled).focus-visible:focus {
   background-color: #ffffff;
   cursor: pointer;
 }
-.button--secundary:not(:disabled).focus-visible:focus .button__incription {
+.button--secondary:not(:disabled).focus-visible:focus .button__incription {
   color: #316dc2;
 }
-.button--secundary:not(:disabled).focus-visible:focus svg {
+.button--secondary:not(:disabled).focus-visible:focus svg {
   background-color: #316dc2;
   stroke: #ffffff;
 }
-.button--secundary:not(:disabled):active:not(.focus-visible):enabled {
+.button--secondary:not(:disabled):active:not(.focus-visible):enabled {
   background-color: #ffffff;
 }
-.button--secundary:not(:disabled):active:not(.focus-visible):enabled .button__incription {
+.button--secondary:not(:disabled):active:not(.focus-visible):enabled .button__incription {
   color: rgba(49, 109, 194, 0.7);
 }
-.button--secundary:not(:disabled):active:not(.focus-visible):enabled svg {
+.button--secondary:not(:disabled):active:not(.focus-visible):enabled svg {
   background-color: #316dc2;
   stroke: rgba(255, 255, 255, 0.7);
 }
@@ -3870,6 +3871,7 @@ button,
 }
 
 .slider-hero__bullet {
+  display: none;
   z-index: 1;
 }
 .slider-hero__bullet .swiper-pagination-bullet {
@@ -4319,20 +4321,20 @@ button,
   }
 }
 
-.about__content-secundary {
+.about__content-secondary {
   margin: 0 0 32px;
 }
 @media (max-width: 1199px) {
-  .about__content-secundary {
+  .about__content-secondary {
     margin: 0 0 36px;
   }
 }
 @media (max-width: 767px) {
-  .about__content-secundary {
+  .about__content-secondary {
     margin: 0 0 25px;
   }
 }
-.about__content-secundary h2 {
+.about__content-secondary h2 {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -4343,21 +4345,21 @@ button,
   margin: 0 0 32px;
 }
 @media (max-width: 1199px) {
-  .about__content-secundary h2 {
+  .about__content-secondary h2 {
     font-size: 28px;
     line-height: 28px;
     margin: 0 0 22px;
   }
 }
 @media (max-width: 767px) {
-  .about__content-secundary h2 {
+  .about__content-secondary h2 {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.5px;
     margin: 0 0 11px;
   }
 }
-.about__content-secundary p {
+.about__content-secondary p {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -4369,14 +4371,14 @@ button,
   margin: 0;
 }
 @media (max-width: 1199px) {
-  .about__content-secundary p {
+  .about__content-secondary p {
     font-size: 16px;
     line-height: 20px;
     padding: 0 150px 0 0;
   }
 }
 @media (max-width: 767px) {
-  .about__content-secundary p {
+  .about__content-secondary p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.5px;
@@ -4665,6 +4667,7 @@ button,
   line-height: 50px;
   color: #316dc2;
   letter-spacing: -2px;
+  max-width: 900px;
   margin: 0;
 }
 @media (max-width: 1199px) {
@@ -4672,6 +4675,7 @@ button,
     font-size: 34px;
     line-height: 55px;
     letter-spacing: -1.5px;
+    max-width: 400px;
     margin-left: 45px;
   }
 }
@@ -4680,10 +4684,15 @@ button,
     font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.7px;
+    max-width: 230px;
     margin: 0 0 32px;
   }
 }
 
+.programs__link {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 @media (max-width: 1199px) {
   .programs__link {
     margin-right: 45px;
@@ -5108,7 +5117,7 @@ button,
   line-height: 26px;
   color: #f0efe9;
   letter-spacing: -0.5px;
-  margin: 0 0 33px;
+  margin: 0 0 32px;
   padding: 0;
 }
 @media (max-width: 1199px) {
@@ -5126,16 +5135,16 @@ button,
   }
 }
 
-.way__container-secundary {
+.way__container-secondary {
   max-width: 498px;
   margin: 0 auto 0 0;
 }
 @media (max-width: 1199px) {
-  .way__container-secundary {
+  .way__container-secondary {
     max-width: none;
   }
 }
-.way__container-secundary h2 {
+.way__container-secondary h2 {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -5147,7 +5156,7 @@ button,
   margin: 4px 0 54px;
 }
 @media (max-width: 1199px) {
-  .way__container-secundary h2 {
+  .way__container-secondary h2 {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: -0.8px;
@@ -5156,7 +5165,7 @@ button,
   }
 }
 @media (max-width: 1199px) and (max-width: 767px) {
-  .way__container-secundary h2 {
+  .way__container-secondary h2 {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.5px;
@@ -5522,6 +5531,7 @@ button,
   min-height: 400px;
   max-width: 286px;
   width: 23%;
+  height: auto;
 }
 @media (max-width: 1199px) {
   .slider-news__item {
@@ -5532,16 +5542,11 @@ button,
 }
 @media (max-width: 767px) {
   .slider-news__item {
-    min-height: 330px;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    min-height: auto;
+    height: 330px;
   }
-  .slider-news__item:nth-child(even) {
-    min-height: 240px;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+  .slider-news__item:nth-child(2n) {
+    height: 240px;
   }
 }
 .slider-news__item--1 {
@@ -5933,114 +5938,114 @@ button,
   list-style-type: none;
 }
 
-.accordion-faq__element {
+.accordion-faq__item {
   padding: 40px 40px 39px;
   border: 1px #316dc2 solid;
   border-radius: 16px;
 }
 @media (max-width: 1199px) {
-  .accordion-faq__element {
+  .accordion-faq__item {
     padding: 30px;
   }
 }
 @media (max-width: 767px) {
-  .accordion-faq__element {
+  .accordion-faq__item {
     padding: 20px 15px;
   }
 }
-.accordion-faq__element:not(:last-child) {
+.accordion-faq__item:not(:last-child) {
   margin: 0 0 10px;
 }
 
-.accordion-faq__element--custom {
+.accordion-faq__item--custom {
   padding: 32px 40px;
 }
 @media (max-width: 1199px) {
-  .accordion-faq__element--custom {
+  .accordion-faq__item--custom {
     padding: 25px 30px 23px;
   }
 }
 @media (max-width: 767px) {
-  .accordion-faq__element--custom {
+  .accordion-faq__item--custom {
     padding: 20px 15px;
   }
 }
-.accordion-faq__element--custom .accordion-faq__button {
+.accordion-faq__item--custom .accordion-faq__button {
   position: relative;
   bottom: 5px;
 }
 @media (max-width: 1199px) {
-  .accordion-faq__element--custom .accordion-faq__button {
+  .accordion-faq__item--custom .accordion-faq__button {
     bottom: 2px;
   }
 }
 
-.accordion-faq__element.is-active {
+.accordion-faq__item.is-active {
   background-color: #316dc2;
   padding: 40px 40px 21px;
 }
 @media (max-width: 1199px) {
-  .accordion-faq__element.is-active {
+  .accordion-faq__item.is-active {
     padding: 30px 30px 20px;
   }
 }
 @media (max-width: 767px) {
-  .accordion-faq__element.is-active {
+  .accordion-faq__item.is-active {
     padding: 20px 15px 8px;
   }
 }
-.accordion-faq__element.is-active h3 {
+.accordion-faq__item.is-active h3 {
   color: #ffffff;
 }
-.accordion-faq__element.is-active .accordion-faq__button {
+.accordion-faq__item.is-active .accordion-faq__button {
   background-color: #ffffff;
   border: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.accordion-faq__element.is-active .accordion-faq__button::before {
+.accordion-faq__item.is-active .accordion-faq__button::before {
   background-color: #316dc2;
 }
-.accordion-faq__element.is-active .accordion-faq__button::after {
+.accordion-faq__item.is-active .accordion-faq__button::after {
   display: none;
 }
 @media (hover: hover) {
-  .accordion-faq__element.is-active .accordion-faq__button:not(:disabled):hover:not(.focus-visible) {
+  .accordion-faq__item.is-active .accordion-faq__button:not(:disabled):hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0);
     border: 1px #ffffff solid;
     cursor: pointer;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
-  .accordion-faq__element.is-active .accordion-faq__button:not(:disabled):hover:not(.focus-visible)::before {
+  .accordion-faq__item.is-active .accordion-faq__button:not(:disabled):hover:not(.focus-visible)::before {
     background-color: #ffffff;
   }
 }
-.accordion-faq__element.is-active .accordion-faq__button:not(:disabled).focus-visible:focus {
+.accordion-faq__item.is-active .accordion-faq__button:not(:disabled).focus-visible:focus {
   background-color: rgba(255, 255, 255, 0);
   border: 1px #ffffff solid;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.accordion-faq__element.is-active .accordion-faq__button:not(:disabled).focus-visible:focus::before {
+.accordion-faq__item.is-active .accordion-faq__button:not(:disabled).focus-visible:focus::before {
   background-color: #ffffff;
 }
-.accordion-faq__element.is-active .accordion-faq__button:not(:disabled):active:not(.focus-visible):enabled {
+.accordion-faq__item.is-active .accordion-faq__button:not(:disabled):active:not(.focus-visible):enabled {
   background-color: #ffffff;
   border: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.accordion-faq__element.is-active .accordion-faq__button:not(:disabled):active:not(.focus-visible):enabled::before {
+.accordion-faq__item.is-active .accordion-faq__button:not(:disabled):active:not(.focus-visible):enabled::before {
   background-color: #275699;
 }
 
-.accordion-faq__element--custom.is-active {
+.accordion-faq__item--custom.is-active {
   padding: 32px 40px 21px;
 }
 @media (max-width: 1199px) {
-  .accordion-faq__element--custom.is-active {
+  .accordion-faq__item--custom.is-active {
     padding: 25px 30px 23px;
   }
 }
@@ -6397,6 +6402,12 @@ button,
   }
 }
 
+.slider-reviews__under-item {
+  max-width: 124px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .slider-reviews__under-item:not(:last-child) {
   margin-right: 29px;
 }
@@ -7061,7 +7072,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1100px;
+  max-width: 700px;
   padding: 0;
   margin: 0;
   row-gap: 10px;
@@ -7157,14 +7168,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 170px;
   padding: 0;
   margin: 0;
   list-style-type: none;
+  row-gap: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 @media (max-width: 1199px) {
   .main-footer__social-list {
+    max-width: 360px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -7173,6 +7187,7 @@ button,
 @media (max-width: 767px) {
   .main-footer__social-list {
     width: 100%;
+    max-width: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -7246,7 +7261,7 @@ button,
   pointer-events: none;
 }
 
-.main-footer__wrapper-secundary {
+.main-footer__wrapper-secondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7261,7 +7276,7 @@ button,
       flex-wrap: wrap;
 }
 @media (max-width: 1199px) {
-  .main-footer__wrapper-secundary {
+  .main-footer__wrapper-secondary {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -7276,7 +7291,7 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .main-footer__wrapper-secundary {
+  .main-footer__wrapper-secondary {
     text-align: center;
     max-width: 85vw;
     margin: 0 auto;

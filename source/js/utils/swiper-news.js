@@ -49,9 +49,11 @@ export const swiperNews = function () {
   initialSwiper();
 
   function toggleControls () {
-    for (let i = 0; i < controls.length; i++) {
-      if (controls[i].classList.contains('is-active')) {
-        controls[i].classList.remove('is-active');
+    if (controls.length !== 0) {
+      for (let i = 0; i < controls.length; i++) {
+        if (controls[i].classList.contains('is-active')) {
+          controls[i].classList.remove('is-active');
+        }
       }
     }
   }
@@ -68,34 +70,37 @@ export const swiperNews = function () {
     swiperSettings.update();
   }
 
-  controls.forEach((control) => {
-    control.addEventListener('click', (evt) => {
-      toggleControls();
+  if (controls.length !== 0) {
+    controls.forEach((control) => {
+      control.addEventListener('click', (evt) => {
+        toggleControls();
 
-      if (!control.classList.contains('is-active')) {
-        control.classList.add('is-active');
-      }
-
-      slides.forEach((slide) => {
-        swiperSettings.update();
-        cleanSlider(slide);
-
-        if (slide.dataset.filter == evt.target.dataset.filter) {
-          cleanSlider(slide);
-          sliderList.prepend(slide);
-          renderingSlide(slide);
+        if (!control.classList.contains('is-active')) {
+          control.classList.add('is-active');
         }
 
-        if (evt.target.dataset.filter == 'all') {
+        slides.forEach((slide) => {
+          swiperSettings.update();
           cleanSlider(slide);
-          sliderList.append(slide);
-          renderingSlide(slide);
-        }
+
+          if (slide.dataset.filter == evt.target.dataset.filter) {
+            cleanSlider(slide);
+            sliderList.prepend(slide);
+            renderingSlide(slide);
+          }
+
+          if (evt.target.dataset.filter == 'all') {
+            cleanSlider(slide);
+            sliderList.append(slide);
+            renderingSlide(slide);
+          }
+        });
       });
     });
-  });
+  }
 
   const breakpoint = window.matchMedia('(min-width:1200px)');
+
   window.addEventListener('resize', () => {
     swiperSettings.update();
 

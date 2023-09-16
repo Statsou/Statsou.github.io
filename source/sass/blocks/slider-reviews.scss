@@ -124,6 +124,9 @@
 }
 
 .slider-reviews__under-item {
+  max-width: 124px;
+  height: fit-content;
+
   &:not(:last-child) {
     margin-right: 29px;
 

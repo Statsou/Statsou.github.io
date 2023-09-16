@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 
-.accordion-faq__element {
+.accordion-faq__item {
   padding: 40px 40px 39px;
   border: 1px $color-cerulean-blue solid;
   border-radius: 16px;
@@ -22,7 +22,7 @@
   }
 }
 
-.accordion-faq__element--custom {
+.accordion-faq__item--custom {
   padding: 32px 40px;
 
   @include vp-1199 {
@@ -43,7 +43,7 @@
   }
 }
 
-.accordion-faq__element.is-active {
+.accordion-faq__item.is-active {
   background-color: $color-cerulean-blue;
   padding: 40px 40px 21px;
 
@@ -98,7 +98,7 @@
   }
 }
 
-.accordion-faq__element--custom.is-active {
+.accordion-faq__item--custom.is-active {
   padding: 32px 40px 21px;
 
   @include vp-1199 {
