@@ -3903,23 +3903,7 @@ button,
   list-style-type: none;
 }
 
-.slider-hero__image {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 85vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 1199px) {
-  .slider-hero__image {
-    min-height: 100%;
-  }
-}
-
 .slider-hero__item {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3927,7 +3911,7 @@ button,
       -ms-flex-align: end;
           align-items: flex-end;
   min-height: 800px;
-  background-color: rgba(49, 109, 194, 0.2);
+  background-color: #8b98ab;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3940,6 +3924,108 @@ button,
 @media (max-width: 767px) {
   .slider-hero__item {
     min-height: 568px;
+  }
+}
+.slider-hero__item--1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-1.webp");
+  background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-1.webp");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slider-hero__item--1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-1@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-1@2x.webp");
+  }
+}
+@media (max-width: 1199px) {
+  .slider-hero__item--1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-1.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-1.webp");
+  }
+}
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
+  .slider-hero__item--1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-1@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-1@2x.webp");
+  }
+}
+@media (max-width: 767px) {
+  .slider-hero__item--1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-1.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-1.webp");
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+  .slider-hero__item--1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-1@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-1@2x.webp");
+  }
+}
+.slider-hero__item--2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-2.webp");
+  background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-2.webp");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slider-hero__item--2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-2@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-2@2x.webp");
+  }
+}
+@media (max-width: 1199px) {
+  .slider-hero__item--2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-2.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-2.webp");
+  }
+}
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
+  .slider-hero__item--2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-2@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-2@2x.webp");
+  }
+}
+@media (max-width: 767px) {
+  .slider-hero__item--2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-2.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-2.webp");
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+  .slider-hero__item--2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-2@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-2@2x.webp");
+  }
+}
+.slider-hero__item--3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-3.webp");
+  background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-3.webp");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .slider-hero__item--3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-desktop-3@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-desktop-3@2x.webp");
+  }
+}
+@media (max-width: 1199px) {
+  .slider-hero__item--3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-3.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-3.webp");
+  }
+}
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
+  .slider-hero__item--3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-tablet-3@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-tablet-3@2x.webp");
+  }
+}
+@media (max-width: 767px) {
+  .slider-hero__item--3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-3.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-3.webp");
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+  .slider-hero__item--3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2))), url("../img/hero/background-slider-mobile-3@2x.webp");
+    background-image: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2)), url("../img/hero/background-slider-mobile-3@2x.webp");
   }
 }
 
