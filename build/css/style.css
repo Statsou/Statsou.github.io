@@ -6160,7 +6160,7 @@ button,
   letter-spacing: -0.5px;
   width: 70%;
   margin: 0;
-  padding: 14px 0;
+  padding: 14px 0 11px;
 }
 @media (max-width: 1199px) {
   .accordion-faq__content p {
