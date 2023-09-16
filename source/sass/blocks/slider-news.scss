@@ -39,13 +39,13 @@
   list-style-type: none;
 
   @include vp-1199 {
-    height: 730px;
+    max-height: 730px;
     margin: 0 0 34px;
   }
 
   @include vp-767 {
-    height: 90vh;
-    margin: 0 0 21px;
+    max-height: 595px;
+    margin: 0 0 26px;
   }
 }
 

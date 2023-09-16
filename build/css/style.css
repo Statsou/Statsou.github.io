@@ -5506,14 +5506,14 @@ button,
 }
 @media (max-width: 1199px) {
   .slider-news__list {
-    height: 730px;
+    max-height: 730px;
     margin: 0 0 34px;
   }
 }
 @media (max-width: 767px) {
   .slider-news__list {
-    height: 90vh;
-    margin: 0 0 21px;
+    max-height: 595px;
+    margin: 0 0 26px;
   }
 }
 
