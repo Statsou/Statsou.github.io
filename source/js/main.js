@@ -1,10 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {activeMenu} from './utils/active-menu';
-import {swiperHero} from './utils/swiper-hero';
-import {swiperPrograms} from './utils/swiper-programs';
-import {swiperNews} from './utils/swiper-news';
-import {swiperReviews} from './utils/swiper-reviews';
-import {maps} from './utils/maps';
+import {addSwiperHero} from './utils/swiper-hero';
+import {addSwiperPrograms} from './utils/swiper-programs';
+import {addSwiperNews} from './utils/swiper-news';
+import {addSwiperReviews} from './utils/swiper-reviews';
+import {addMaps} from './utils/maps';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {CustomSelect} from './modules/select/custom-select';
@@ -19,11 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   activeMenu();
-  swiperHero();
-  swiperPrograms();
-  swiperNews();
-  swiperReviews();
-  maps();
+  addSwiperHero();
+  addSwiperPrograms();
+  addSwiperNews();
+  addSwiperReviews();
+  addMaps();
 
   // Modules
   // ---------------------------------

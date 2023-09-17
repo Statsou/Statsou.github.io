@@ -1,4 +1,4 @@
-export const swiperPrograms = function () {
+export const addSwiperPrograms = function () {
   new Swiper('.swiper-programs', {
     loop: false,
     watchSlidesVisibility: true,

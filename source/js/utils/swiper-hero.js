@@ -1,4 +1,4 @@
-export const swiperHero = function () {
+export const addSwiperHero = function () {
   const sliderHeroContent = new Swiper('.slider-hero', {
     loop: true,
     watchSlidesVisibility: true,

@@ -1,4 +1,4 @@
-export const swiperReviews = function () {
+export const addSwiperReviews = function () {
   new Swiper('.swiper-reviews', {
     loop: false,
     watchSlidesVisibility: true,

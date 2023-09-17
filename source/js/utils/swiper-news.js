@@ -1,4 +1,4 @@
-export const swiperNews = function () {
+export const addSwiperNews = function () {
   const initialSwiper = function ()  {
     swiperSettings = new Swiper('.swiper-news', {
       loop: false,
