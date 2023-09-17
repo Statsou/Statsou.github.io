@@ -8,6 +8,10 @@
 
   @include vp-1199 {
     margin: 0 0 13px;
+
+    &--dark {
+      margin: 0 0 16px;
+    }
   }
 
   @include vp-767 {
@@ -230,6 +234,7 @@
 
   &--dark {
     border: 1px $color-charcoal-opacity solid;
+    height: 49px;
 
     @include vp-767 {
       height: 44px;
