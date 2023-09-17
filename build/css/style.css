@@ -3709,7 +3709,7 @@ button,
 
 .main-header__menu-link,
 .main-header__sub-menu-link,
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3722,30 +3722,30 @@ button,
 @media (hover: hover) {
   .main-header__menu-link:not(.disabled):hover:not(.focus-visible),
 .main-header__sub-menu-link:not(.disabled):hover:not(.focus-visible),
-.main-header__sub-menu-title:not(.disabled):hover:not(.focus-visible) {
+.main-header__sub-menu-button:not(.disabled):hover:not(.focus-visible) {
     opacity: 1;
     cursor: pointer;
   }
 }
 .main-header__menu-link:not(.disabled).focus-visible:focus,
 .main-header__sub-menu-link:not(.disabled).focus-visible:focus,
-.main-header__sub-menu-title:not(.disabled).focus-visible:focus {
+.main-header__sub-menu-button:not(.disabled).focus-visible:focus {
   opacity: 1;
   cursor: pointer;
 }
 .main-header__menu-link:not(.disabled).focus-visible:active,
 .main-header__sub-menu-link:not(.disabled).focus-visible:active,
-.main-header__sub-menu-title:not(.disabled).focus-visible:active {
+.main-header__sub-menu-button:not(.disabled).focus-visible:active {
   opacity: 1;
 }
 .main-header__menu-link:not(.disabled):active:not(.focus-visible),
 .main-header__sub-menu-link:not(.disabled):active:not(.focus-visible),
-.main-header__sub-menu-title:not(.disabled):active:not(.focus-visible) {
+.main-header__sub-menu-button:not(.disabled):active:not(.focus-visible) {
   opacity: 1;
 }
 .main-header__menu-link:disabled,
 .main-header__sub-menu-link:disabled,
-.main-header__sub-menu-title:disabled {
+.main-header__sub-menu-button:disabled {
   color: #a9afb7;
   opacity: 0.3;
   pointer-events: none;
@@ -3753,17 +3753,19 @@ button,
 }
 
 .main-header__menu-link,
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   text-transform: uppercase;
 }
 
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   position: relative;
   padding: 0 30px 0 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
-.main-header__sub-menu-title::before {
+.main-header__sub-menu-button::before {
   position: absolute;
-  top: 9px;
+  top: 5px;
   right: 8px;
   width: 11px;
   height: 5px;
@@ -3777,10 +3779,10 @@ button,
           clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   content: "";
 }
-.main-header__sub-menu-title.is-open {
+.main-header__sub-menu-button.is-open {
   opacity: 1;
 }
-.main-header__sub-menu-title.is-open::before {
+.main-header__sub-menu-button.is-open::before {
   opacity: 1;
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
@@ -5861,6 +5863,7 @@ button,
   .slider-news__bullet .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):not(.disabled):hover:not(.focus-visible) {
     border: 1px #316dc2 solid;
     opacity: 1;
+    outline: none;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -5868,6 +5871,7 @@ button,
 .slider-news__bullet .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):not(.disabled).focus-visible:focus {
   border: 1px #316dc2 solid;
   opacity: 1;
+  outline: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -6123,6 +6127,7 @@ button,
   .accordion-faq__button:not(:disabled):hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0);
     border: 1px #316dc2 solid;
+    outline: none;
     cursor: pointer;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
@@ -6134,6 +6139,7 @@ button,
 .accordion-faq__button:not(:disabled).focus-visible:focus {
   background-color: rgba(255, 255, 255, 0);
   border: 1px #316dc2 solid;
+  outline: none;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -7229,11 +7235,17 @@ button,
   }
 }
 @media (hover: hover) {
+  .main-footer__social-link:not(.disabled):hover:not(.focus-visible) {
+    outline: none;
+  }
   .main-footer__social-link:not(.disabled):hover:not(.focus-visible) svg {
     opacity: 0.5;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
+}
+.main-footer__social-link:not(.disabled).focus-visible:focus {
+  outline: none;
 }
 .main-footer__social-link:not(.disabled).focus-visible:focus svg {
   opacity: 0.5;

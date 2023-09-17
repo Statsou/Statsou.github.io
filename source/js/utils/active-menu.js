@@ -5,7 +5,7 @@ export const activeMenu = function () {
   const menuList = navigation.querySelector('.main-header__menu-list');
   const menuLinks = menuList.querySelectorAll('.main-header__menu-link');
 
-  const subMenuTitles = menuList.querySelectorAll('.main-header__sub-menu-title');
+  const subMenuButtons = menuList.querySelectorAll('.main-header__sub-menu-button');
   const subMenuLists = menuList.querySelectorAll('.main-header__sub-menu-list');
   const subMenuLinks = menuList.querySelectorAll('.main-header__sub-menu-link');
 
@@ -36,7 +36,7 @@ export const activeMenu = function () {
   }
 
   function openMenu () {
-    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuTitles !== 0) {
+    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuButtons !== 0) {
       menuElements.forEach((element) => {
         element.classList.toggle('is-open');
       })
@@ -47,7 +47,7 @@ export const activeMenu = function () {
         }
       });
 
-      subMenuTitles.forEach((title) => {
+      subMenuButtons.forEach((title) => {
         if (title.classList.contains('is-open')) {
           title.classList.remove('is-open');
         }
@@ -62,7 +62,7 @@ export const activeMenu = function () {
   }
 
   function closeMenu () {
-    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuTitles !== 0) {
+    if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuButtons !== 0) {
       menuElements.forEach((element) => {
         element.classList.remove('is-open');
       })
@@ -73,7 +73,7 @@ export const activeMenu = function () {
         }
       });
 
-      subMenuTitles.forEach((title) => {
+      subMenuButtons.forEach((title) => {
         if (title.classList.contains('is-open')) {
           title.classList.remove('is-open');
         }
@@ -103,8 +103,8 @@ export const activeMenu = function () {
     });
   });
 
-  if (subMenuTitles !== 0) {
-    subMenuTitles.forEach((title) => {
+  if (subMenuButtons !== 0) {
+    subMenuButtons.forEach((title) => {
       const siblingList = title.nextElementSibling;
       title.addEventListener('click', () => {
         siblingList.classList.toggle('is-open');

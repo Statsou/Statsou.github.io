@@ -175,6 +175,7 @@
     @include hover-focus {
       background-color: $color-transparent;
       border: 1px $color-cerulean-blue solid;
+      outline: none;
 
       cursor: pointer;
       transition: all 0.2s;

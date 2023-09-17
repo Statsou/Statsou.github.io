@@ -291,7 +291,7 @@
 
 .main-header__menu-link,
 .main-header__sub-menu-link,
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -323,18 +323,20 @@
 }
 
 .main-header__menu-link,
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   text-transform: uppercase;
 }
 
-.main-header__sub-menu-title {
+.main-header__sub-menu-button {
   position: relative;
 
   padding: 0 30px 0 0;
+  background-color: $color-transparent;
+  border: none;
 
   &::before {
     position: absolute;
-    top: 9px;
+    top: 5px;
     right: 8px;
 
     width: 11px;

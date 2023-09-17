@@ -162,6 +162,8 @@
 
   &:not(.disabled) {
     @include hover-focus {
+      outline: none;
+
       svg {
         opacity: 0.5;
         transition: all 0.2s;

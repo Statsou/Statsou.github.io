@@ -375,6 +375,8 @@
         @include hover-focus {
           border: 1px $color-cerulean-blue solid;
           opacity: 1;
+          outline: none;
+
           transition: all 0.2s;
         }
 
@@ -382,6 +384,7 @@
           color: $color-default-white;
           background-color: $color-endeavour;
           opacity: 1;
+
           transition: all 0.2s;
         }
       }
