@@ -25,7 +25,6 @@ const maps = function () {
       mapOptions.center = [55.02776866934401, 82.9270050991378];
     }
 
-
     const customIcon = L.icon(iconOptions);
 
     const markerOptions = {
