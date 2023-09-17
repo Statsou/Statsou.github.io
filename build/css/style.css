@@ -3895,6 +3895,7 @@ button,
       -ms-flex-align: end;
           align-items: flex-end;
   min-height: 800px;
+  height: auto;
   padding: 120px 0 60px 100px;
   background-color: #8b98ab;
   background-repeat: no-repeat;
