@@ -3,9 +3,9 @@ export const swiperHero = function () {
     loop: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
