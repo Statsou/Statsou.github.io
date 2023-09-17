@@ -10,7 +10,7 @@
 
   .slider-hero__bullet {
     position: relative;
-    top: 1px;
+    top: 1px; // 5.5px
 
     width: max-content;
     padding: 6px 20px 8px;
@@ -207,7 +207,7 @@
     letter-spacing: -1.8px;
 
     width: 968px;
-    padding: 41px 50px 29px;
+    padding: 41px 50px 29px; //46px 50px 29px
     margin: 0;
 
     background-color: $color-default-white;

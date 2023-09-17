@@ -1493,7 +1493,7 @@
           c = d - s.touchStartTime;
       if (t.allowClick) {
           const e = o.path || (o.composedPath && o.composedPath());
-          t.updateClickedSlide((e && e[0]) || o.target), t.emit("tap click", o), c < 300 && d - s.lastClickTime < 300 && t.emit("doubleTap doubleClick", o);
+          t.updateClickedSlide((e && e[0]) || o.target), t.emit("tap click", o), c < 90 && d - s.lastClickTime < 90 && t.emit("doubleTap doubleClick", o);
       }
       if (
           ((s.lastClickTime = u()),
@@ -1634,7 +1634,7 @@
       direction: "horizontal",
       touchEventsTarget: "wrapper",
       initialSlide: 0,
-      speed: 300,
+      speed: 90,
       cssMode: !1,
       updateOnWindowResize: !0,
       resizeObserver: !0,
@@ -1674,7 +1674,7 @@
       shortSwipes: !0,
       longSwipes: !0,
       longSwipesRatio: 0.5,
-      longSwipesMs: 300,
+      longSwipesMs: 90,
       followFinger: !0,
       allowTouchMove: !0,
       threshold: 0,
@@ -3440,8 +3440,8 @@
                         g < E && (g = E),
                         g > T && (g = T))
                       : ((h = 0), (g = 0)),
-                  m.$imageWrapEl.transition(300).transform(`translate3d(${h}px, ${g}px,0)`),
-                  m.$imageEl.transition(300).transform(`translate3d(0,0,0) scale(${s.scale})`);
+                  m.$imageWrapEl.transition(90).transform(`translate3d(${h}px, ${g}px,0)`),
+                  m.$imageEl.transition(90).transform(`translate3d(0,0,0) scale(${s.scale})`);
           }
           function $() {
               const e = t.zoom,
@@ -3457,8 +3457,8 @@
                       (t.params.cssMode && ((t.wrapperEl.style.overflow = ""), (t.wrapperEl.style.touchAction = "")),
                       (e.scale = 1),
                       (p = 1),
-                      m.$imageWrapEl.transition(300).transform("translate3d(0,0,0)"),
-                      m.$imageEl.transition(300).transform("translate3d(0,0,0) scale(1)"),
+                      m.$imageWrapEl.transition(90).transform("translate3d(0,0,0)"),
+                      m.$imageEl.transition(90).transform("translate3d(0,0,0) scale(1)"),
                       m.$slideEl.removeClass(`${s.zoomedSlideClass}`),
                       (m.$slideEl = void 0));
           }
@@ -3550,8 +3550,8 @@
                           if (!m.$imageEl || 0 === m.$imageEl.length) return;
                           if (!f.isTouched || !f.isMoved) return (f.isTouched = !1), void (f.isMoved = !1);
                           (f.isTouched = !1), (f.isMoved = !1);
-                          let s = 300,
-                              a = 300;
+                          let s = 90,
+                              a = 90;
                           const i = g.x * s,
                               r = f.currentX + i,
                               n = g.y * a,
@@ -4329,7 +4329,7 @@
                                           s = d.velocities.pop(),
                                           a = e.position - s.position,
                                           i = e.time - s.time;
-                                      (t.velocity = a / i), (t.velocity /= 2), Math.abs(t.velocity) < r.freeMode.minimumVelocity && (t.velocity = 0), (i > 150 || u() - e.time > 300) && (t.velocity = 0);
+                                      (t.velocity = a / i), (t.velocity /= 2), Math.abs(t.velocity) < r.freeMode.minimumVelocity && (t.velocity = 0), (i > 150 || u() - e.time > 90) && (t.velocity = 0);
                                   } else t.velocity = 0;
                                   (t.velocity *= r.freeMode.momentumVelocityRatio), (d.velocities.length = 0);
                                   let e = 1e3 * r.freeMode.momentumRatio;
