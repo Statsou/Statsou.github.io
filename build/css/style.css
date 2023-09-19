@@ -5429,6 +5429,10 @@ button,
   opacity: 0.6;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 1199px) {
   .news__filter-button {
