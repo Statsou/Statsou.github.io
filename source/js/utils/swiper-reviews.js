@@ -1,5 +1,7 @@
+import Swiper from '../swiper-new';
+
 export const addSwiperReviews = function () {
-  new Swiper('.swiper-reviews', {
+  const swiperSettings = new Swiper('.swiper-reviews', {
     loop: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: false,
@@ -24,4 +26,4 @@ export const addSwiperReviews = function () {
       },
     },
   });
-}
+};

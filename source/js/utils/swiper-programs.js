@@ -1,5 +1,7 @@
+import Swiper from '../swiper-new';
+
 export const addSwiperPrograms = function () {
-  new Swiper('.swiper-programs', {
+  const swiperSettings = new Swiper('.swiper-programs', {
     loop: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: false,
@@ -24,4 +26,4 @@ export const addSwiperPrograms = function () {
       },
     },
   });
-}
+};

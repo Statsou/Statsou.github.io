@@ -1,3 +1,5 @@
+import Swiper from '../swiper-new';
+
 export const addSwiperNews = function () {
   const initialSwiper = function () {
     swiperSettings = new Swiper('.swiper-news', {
@@ -38,7 +40,7 @@ export const addSwiperNews = function () {
         },
       },
     });
-  }
+  };
 
   const controlsList = document.querySelector('.news__filter-list');
   const sliderList = document.querySelector('.slider-news__list');
@@ -48,7 +50,7 @@ export const addSwiperNews = function () {
 
   initialSwiper();
 
-  function toggleControls () {
+  function toggleControls() {
     if (controls.length !== 0) {
       for (let i = 0; i < controls.length; i++) {
         if (controls[i].classList.contains('is-active')) {
@@ -56,19 +58,19 @@ export const addSwiperNews = function () {
         }
       }
     }
-  }
+  };
 
-  function cleanSlider (slide) {
+  function cleanSlider(slide) {
     slide.classList.remove('swiper-slide');
     slide.style.display = 'none';
-  }
+  };
 
-  function renderingSlide (slide) {
+  function renderingSlide(slide) {
     slide.classList.add('swiper-slide');
     slide.style.display = 'flex';
     swiperSettings.slideTo(0);
     swiperSettings.update();
-  }
+  };
 
   if (controls.length !== 0) {
     controls.forEach((control) => {
@@ -110,4 +112,4 @@ export const addSwiperNews = function () {
       initialSwiper();
     }
   });
-}
+};

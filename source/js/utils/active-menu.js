@@ -35,11 +35,11 @@ export const activeMenu = function () {
     });
   }
 
-  function openMenu () {
+  function openMenu() {
     if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuButtons !== 0) {
       menuElements.forEach((element) => {
         element.classList.toggle('is-open');
-      })
+      });
 
       subMenuLists.forEach((menu) => {
         if (menu.classList.contains('is-open')) {
@@ -59,13 +59,13 @@ export const activeMenu = function () {
         window.onscroll = () => window.scroll();
       }
     }
-  }
+  };
 
-  function closeMenu () {
+  function closeMenu() {
     if (menuElements.length !== 0 && subMenuLists !== 0 && subMenuButtons !== 0) {
       menuElements.forEach((element) => {
         element.classList.remove('is-open');
-      })
+      });
 
       subMenuLists.forEach((menu) => {
         if (menu.classList.contains('is-open')) {
@@ -81,15 +81,15 @@ export const activeMenu = function () {
 
       window.onscroll = () => window.scroll();
     }
-  }
+  };
 
   menuButton.addEventListener('click', () => {
     openMenu();
-  })
+  });
 
   headerOverlay.addEventListener('click', () => {
     closeMenu();
-  })
+  });
 
   menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
@@ -112,4 +112,4 @@ export const activeMenu = function () {
       });
     });
   }
-}
+};

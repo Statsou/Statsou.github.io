@@ -1,6 +1,6 @@
 const addMaps = function () {
-  const tabletWidth = window.matchMedia(`(max-width:1199px)`);
-  const mobileWidth = window.matchMedia(`(max-width:767px)`);
+  const tabletWidth = window.matchMedia('(max-width:1199px)');
+  const mobileWidth = window.matchMedia('(max-width:767px)');
 
   const mapInitial = function () {
     const mapOptions = {
