@@ -306,6 +306,10 @@
     @include hover-focus {
       opacity: 1;
       cursor: pointer;
+
+      &::before {
+        opacity: 1;
+      }
     }
 
     @include active {
@@ -313,7 +317,8 @@
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     color: $color-mischka;
     opacity: 0.3;
 

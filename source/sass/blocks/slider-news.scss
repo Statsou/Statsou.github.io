@@ -230,6 +230,7 @@
 
     .slider-news__under-wrapper {
       width: 389px;
+      justify-content: space-between;
 
       @include vp-1199 {
         width: 240px;
