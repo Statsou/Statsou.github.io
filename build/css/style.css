@@ -4453,14 +4453,15 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: calc(33vw + 2px);
   max-width: 480px;
   padding: 30px 61px 30px 59px;
   border: 1px #ffffff solid;
   border-radius: 16px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 4px;
+  gap: 20px;
 }
 @media (max-width: 1199px) {
   .advantages__item {
@@ -4471,6 +4472,9 @@ button,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: auto;
     padding: 30px 30px 25px;
     gap: 0;
@@ -4479,6 +4483,7 @@ button,
 @media (max-width: 767px) {
   .advantages__item {
     display: block;
+    max-width: none;
     padding: 20px 15px 23px 20px;
     margin: 0 0 22px;
   }
@@ -4492,7 +4497,7 @@ button,
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  max-width: 175px;
+  width: 164px;
   margin: 0;
 }
 @media (max-width: 1199px) {
@@ -4500,7 +4505,7 @@ button,
     font-size: 20px;
     line-height: 22px;
     letter-spacing: -0.6px;
-    max-width: none;
+    width: auto;
     padding: 0 40px 0 0;
     margin: 0 0 7px;
   }
@@ -4564,6 +4569,14 @@ button,
   padding: 30px 49px 30px 59px;
   gap: 16px;
 }
+.advantages__item--2 h3 {
+  width: 174px;
+}
+@media (max-width: 1199px) {
+  .advantages__item--2 h3 {
+    width: auto;
+  }
+}
 @media (max-width: 1199px) {
   .advantages__item--2 {
     padding: 30px 30px 25px;
@@ -4592,13 +4605,19 @@ button,
   }
 }
 .advantages__item--3 h3 {
-  max-width: 154px;
+  max-width: 135px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .advantages__item--3 h3 {
     max-width: none;
+    padding: 0 80px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item--3 h3 {
+    padding: 0;
     margin: 0 0 3px;
   }
 }
@@ -4614,6 +4633,10 @@ button,
 .advantages__item--4 {
   padding: 30px 45px 30px 59px;
   gap: 20px;
+}
+.advantages__item--4 h3 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (max-width: 1199px) {
   .advantages__item--4 {
