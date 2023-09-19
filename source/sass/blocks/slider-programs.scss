@@ -63,14 +63,14 @@
   }
 
   @include vp-767 {
-    min-height: calc(60vh + 4px);
+    min-height: 400px;
+  }
 
-    picture {
-      position: relative;
+  picture {
+    position: relative;
 
-      width: 100%;
-      height: 100%;
-    }
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -83,6 +83,7 @@
   height: 100%;
 
   border-radius: 12px;
+  object-fit: cover;
   z-index: -1;
 }
 
