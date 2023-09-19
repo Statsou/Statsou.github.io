@@ -1,5 +1,5 @@
 export const addSwiperNews = function () {
-  const initialSwiper = function ()  {
+  const initialSwiper = function () {
     swiperSettings = new Swiper('.swiper-news', {
       loop: false,
       watchSlidesVisibility: true,
@@ -83,13 +83,13 @@ export const addSwiperNews = function () {
           swiperSettings.update();
           cleanSlider(slide);
 
-          if (slide.dataset.filter == evt.target.dataset.filter) {
+          if (slide.dataset.filter === evt.target.dataset.filter) {
             cleanSlider(slide);
             sliderList.prepend(slide);
             renderingSlide(slide);
           }
 
-          if (evt.target.dataset.filter == 'all') {
+          if (evt.target.dataset.filter === 'all') {
             cleanSlider(slide);
             sliderList.append(slide);
             renderingSlide(slide);
