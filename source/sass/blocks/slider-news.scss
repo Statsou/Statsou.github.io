@@ -243,6 +243,22 @@
   }
 }
 
+.slider-news__content-slide {
+  @include vp-1199 {
+    padding: 15px 15px 0 0;
+    max-height: 350px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include vp-1199 {
+    max-height: 240px;
+  }
+}
+
 .slider-news__date {
   position: relative;
 
