@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {activeMenu} from './utils/active-menu';
+import {activeFocus} from './utils/modal-focus';
 import {addSwiperHero} from './utils/swiper-hero';
 import {addSwiperPrograms} from './utils/swiper-programs';
 import {addSwiperNews} from './utils/swiper-news';
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addSwiperNews();
   addSwiperReviews();
   addMaps();
+  activeFocus();
 
   // Modules
   // ---------------------------------

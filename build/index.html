@@ -40,61 +40,63 @@
               </svg>
             </button>
 
-            <ul class="main-header__menu-list">
-              <li class="main-header__menu-item">
-                <a class="main-header__menu-link" href="#">О проекте</a>
-              </li>
+            <dialog class="main-header__menu" open>
+              <ul class="main-header__menu-list">
+                <li class="main-header__menu-item">
+                  <a class="main-header__menu-link" href="#">О проекте</a>
+                </li>
 
-              <li class="main-header__menu-item">
-                <button class="main-header__sub-menu-button" type="button">Программы</button>
+                <li class="main-header__menu-item">
+                  <button class="main-header__sub-menu-button" type="button">Программы</button>
 
-                <ul class="main-header__sub-menu-list">
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Стажировки</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Волонтёрство</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Учёба</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Религия</a>
-                  </li>
-                </ul>
-              </li>
+                  <ul class="main-header__sub-menu-list">
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Стажировки</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Учёба</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Религия</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <li class="main-header__menu-item">
-                <a class="main-header__menu-link" href="#">Как поехать</a>
-              </li>
+                <li class="main-header__menu-item">
+                  <a class="main-header__menu-link" href="#">Как поехать</a>
+                </li>
 
-              <li class="main-header__menu-item">
-                <a class="main-header__menu-link" href="#">Отзывы</a>
-              </li>
+                <li class="main-header__menu-item">
+                  <a class="main-header__menu-link" href="#">Отзывы</a>
+                </li>
 
-              <li class="main-header__menu-item">
-                <button class="main-header__sub-menu-button" type="button">Новости</button>
+                <li class="main-header__menu-item">
+                  <button class="main-header__sub-menu-button" type="button">Новости</button>
 
-                <ul class="main-header__sub-menu-list">
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Волонтёрство</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Стажировки</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Карьера</a>
-                  </li>
-                  <li class="main-header__sub-menu-item">
-                    <a class="main-header__sub-menu-link" href="#">Путешествия</a>
-                  </li>
-                </ul>
-              </li>
+                  <ul class="main-header__sub-menu-list">
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Стажировки</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Карьера</a>
+                    </li>
+                    <li class="main-header__sub-menu-item">
+                      <a class="main-header__sub-menu-link" href="#">Путешествия</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <li class="main-header__menu-item">
-                <a class="main-header__menu-link" href="#">Контакты</a>
-              </li>
-            </ul>
+                <li class="main-header__menu-item">
+                  <a class="main-header__menu-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </dialog>
           </nav>
         </div>
       </header>
@@ -1043,7 +1045,7 @@
 
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__overlay" data-close-modal="data-close-modal"></div>
         <div class="modal__content">
           <h2>Напишите нам</h2>
           <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
@@ -1053,7 +1055,7 @@
               <fieldset>
 
                 <div class="modal__input" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <input type="text" name="name" id="modal-name">
+                  <input type="text" name="name" id="modal-name" data-focus="data-focus">
                   <label class="modal__label" for="name">Имя</label>
                 </div>
 
@@ -1095,7 +1097,7 @@
                   <use xlink:href="img/sprite.svg#arrow-link"></use>
                 </svg>
               </button>
-              <button class="modal__close-button" type="button" aria-label="Закрыть попап" data-close-modal>
+              <button class="modal__close-button" type="button" aria-label="Закрыть попап" data-close-modal="data-close-modal">
                 <svg width="20" height="20" viewBox="0 0 20 20">
                   <use xlink:href="img/sprite.svg#close-modal"></use>
                 </svg>
