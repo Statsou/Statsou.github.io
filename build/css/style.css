@@ -4851,8 +4851,7 @@ button,
   min-height: 420px;
   height: auto;
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 109, 194, 0.2)), to(rgba(49, 109, 194, 0.2)));
-  background: linear-gradient(rgba(49, 109, 194, 0.2), rgba(49, 109, 194, 0.2));
+  background-color: rgba(49, 109, 194, 0.2);
   border-radius: 12px;
 }
 @media (max-width: 1199px) {

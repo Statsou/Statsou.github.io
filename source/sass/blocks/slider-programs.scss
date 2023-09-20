@@ -55,7 +55,7 @@
   height: auto;
   padding: 0;
 
-  background: $color-overlay-slider;
+  background-color: rgba($color-cerulean-blue, 0.2);
   border-radius: 12px;
 
   @include vp-1199 {
