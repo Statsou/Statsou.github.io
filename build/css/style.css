@@ -4794,7 +4794,6 @@ button,
   min-height: 420px;
   height: auto;
   padding: 0;
-  background-color: rgba(49, 109, 194, 0.2);
   border-radius: 12px;
 }
 @media (max-width: 1199px) {
@@ -4811,6 +4810,7 @@ button,
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: rgba(49, 109, 194, 0.2);
 }
 
 .slider-programs__image {
@@ -4822,7 +4822,7 @@ button,
   border-radius: 12px;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: -1;
+  z-index: -10;
 }
 
 .slider-programs__content-slide {
