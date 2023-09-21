@@ -148,8 +148,6 @@ export const activeMenu = function () {
           siblingList.classList.add('enabled');
           setTimeout(() => { siblingList.classList.toggle('is-open'); }, 1);
           setTimeout(() => { title.classList.toggle('is-open'); }, 1);
-
-
         }
       });
     });
