@@ -13,6 +13,13 @@ let modals;
 //   openModalInCloseCallback('modal-5');
 // },
 
+function focusElementinOpenFeedback(nameModal) {
+  const modal = document.querySelector(`[data-modal=${nameModal}]`);
+  if (modal.classList.contains('is-active')) {
+    setTimeout(() => { modal.querySelector('[data-focus=data-focus]').focus(); }, 100);
+  }
+};
+
 const settings = {
   'default': {
     preventDefault: true,
@@ -24,6 +31,9 @@ const settings = {
     openCallback: false,
     closeCallback: false,
   },
+  'feedback': {
+    openCallback: () => focusElementinOpenFeedback('feedback'),
+  }
 };
 
 const initModals = () => {
