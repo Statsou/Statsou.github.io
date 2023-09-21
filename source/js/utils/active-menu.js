@@ -27,6 +27,7 @@ export const activeMenu = function () {
 
     menuElements.push(headerOverlay, navigation, menuButton, iconBurger, iconClose);
 
+    menu.classList.remove('disabled');
     menu.close();
     navigation.classList.add('is-active');
     menuButton.classList.add('is-active');
@@ -34,6 +35,7 @@ export const activeMenu = function () {
 
     subMenuLists.forEach((menu) => {
       menu.classList.add('is-active');
+      menu.classList.remove('disabled');
     });
   }
 
