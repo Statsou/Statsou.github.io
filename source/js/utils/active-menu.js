@@ -70,8 +70,13 @@ export const activeMenu = function () {
       }
 
 
+      if (document.body.classList.contains('scroll-lock')) {
+        window.scrollLock.enableScrolling();
+      } else {
         window.scrollLock.disableScrolling();
-        document.addEventListener('keydown', onDocumentKeydown);
+      }
+
+      document.addEventListener('keydown', onDocumentKeydown);
     }
   };
 
