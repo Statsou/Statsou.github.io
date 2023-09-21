@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: max-content;
-  max-width: 1440px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 120px 100px 60px;
+  padding: 120px 0 60px;
   column-gap: 30px;
 
   @include vp-1199 {
