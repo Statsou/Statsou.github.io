@@ -285,8 +285,6 @@
   list-style-type: none;
   padding: 0 16px;
 
-  transition: 0.9s ease-out;
-
   &.disabled {
     padding: 9px 16px 0;
     display: block;
@@ -305,7 +303,7 @@
   &.is-open {
     padding: 9px 16px 0;
     max-height: 100vh;
-    transition: 0.9s ease-out;
+    transition: 1s ease-out;
   }
 }
 

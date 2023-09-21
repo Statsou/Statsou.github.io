@@ -52,6 +52,7 @@ export const activeMenu = function () {
       subMenuLists.forEach((menu) => {
         if (menu.classList.contains('is-open')) {
           menu.classList.remove('is-open');
+          menu.classList.remove('enabled');
         }
       });
 
@@ -67,7 +68,7 @@ export const activeMenu = function () {
         window.focusLock.lock('.main-header__menu-list');
       } else {
         menu.classList.toggle('is-open');
-        setTimeout(() => { menu.close(); }, 400);
+        setTimeout(() => { menu.close(); }, 300);
         window.focusLock.unlock('.main-header__menu-list');
       }
 
@@ -106,7 +107,7 @@ export const activeMenu = function () {
 
       if (menu.getAttribute('open') !== null) {
         menu.classList.toggle('is-open');
-        setTimeout(() => { menu.close(); }, 400);
+        setTimeout(() => { menu.close(); }, 300);
       }
 
       window.scrollLock.enableScrolling();
@@ -139,9 +140,17 @@ export const activeMenu = function () {
     subMenuButtons.forEach((title) => {
       const siblingList = title.nextElementSibling;
       title.addEventListener('click', () => {
-        siblingList.classList.toggle('enabled');
-        setTimeout(() => { siblingList.classList.toggle('is-open'); }, 10);
-        setTimeout(() => { title.classList.toggle('is-open'); }, 10);
+        if (siblingList.classList.contains('enabled')) {
+          setTimeout(() => { siblingList.classList.remove('enabled'); }, 300);
+          siblingList.classList.toggle('is-open');
+          title.classList.toggle('is-open');
+        } else {
+          siblingList.classList.add('enabled');
+          setTimeout(() => { siblingList.classList.toggle('is-open'); }, 1);
+          setTimeout(() => { title.classList.toggle('is-open'); }, 1);
+
+
+        }
       });
     });
   }
